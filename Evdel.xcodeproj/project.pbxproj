@@ -1,0 +1,497 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5C05E4931B35F22900D97E13 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C05E4921B35F22900D97E13 /* AppDelegate.swift */; };
+		5C05E4951B35F22900D97E13 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C05E4941B35F22900D97E13 /* ViewController.swift */; };
+		5C05E4971B35F22900D97E13 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C05E4961B35F22900D97E13 /* Assets.xcassets */; };
+		5C05E49A1B35F22900D97E13 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C05E4981B35F22900D97E13 /* Main.storyboard */; };
+		5C05E4A51B35F22900D97E13 /* EvdelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C05E4A41B35F22900D97E13 /* EvdelTests.swift */; };
+		5C05E4B01B35F22900D97E13 /* EvdelUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C05E4AF1B35F22900D97E13 /* EvdelUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5C05E4A11B35F22900D97E13 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5C05E4871B35F22900D97E13 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5C05E48E1B35F22900D97E13;
+			remoteInfo = Evdel;
+		};
+		5C05E4AC1B35F22900D97E13 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5C05E4871B35F22900D97E13 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5C05E48E1B35F22900D97E13;
+			remoteInfo = Evdel;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5C05E48F1B35F22900D97E13 /* Evdel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Evdel.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C05E4921B35F22900D97E13 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5C05E4941B35F22900D97E13 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5C05E4961B35F22900D97E13 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5C05E4991B35F22900D97E13 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5C05E49B1B35F22900D97E13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5C05E4A01B35F22900D97E13 /* EvdelTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EvdelTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C05E4A41B35F22900D97E13 /* EvdelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvdelTests.swift; sourceTree = "<group>"; };
+		5C05E4A61B35F22900D97E13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5C05E4AB1B35F22900D97E13 /* EvdelUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EvdelUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C05E4AF1B35F22900D97E13 /* EvdelUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvdelUITests.swift; sourceTree = "<group>"; };
+		5C05E4B11B35F22900D97E13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5C05E48C1B35F22900D97E13 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5C05E49D1B35F22900D97E13 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5C05E4A81B35F22900D97E13 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5C05E4861B35F22900D97E13 = {
+			isa = PBXGroup;
+			children = (
+				5C05E4911B35F22900D97E13 /* Evdel */,
+				5C05E4A31B35F22900D97E13 /* EvdelTests */,
+				5C05E4AE1B35F22900D97E13 /* EvdelUITests */,
+				5C05E4901B35F22900D97E13 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5C05E4901B35F22900D97E13 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5C05E48F1B35F22900D97E13 /* Evdel.app */,
+				5C05E4A01B35F22900D97E13 /* EvdelTests.xctest */,
+				5C05E4AB1B35F22900D97E13 /* EvdelUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5C05E4911B35F22900D97E13 /* Evdel */ = {
+			isa = PBXGroup;
+			children = (
+				5C05E4921B35F22900D97E13 /* AppDelegate.swift */,
+				5C05E4941B35F22900D97E13 /* ViewController.swift */,
+				5C05E4961B35F22900D97E13 /* Assets.xcassets */,
+				5C05E4981B35F22900D97E13 /* Main.storyboard */,
+				5C05E49B1B35F22900D97E13 /* Info.plist */,
+			);
+			path = Evdel;
+			sourceTree = "<group>";
+		};
+		5C05E4A31B35F22900D97E13 /* EvdelTests */ = {
+			isa = PBXGroup;
+			children = (
+				5C05E4A41B35F22900D97E13 /* EvdelTests.swift */,
+				5C05E4A61B35F22900D97E13 /* Info.plist */,
+			);
+			path = EvdelTests;
+			sourceTree = "<group>";
+		};
+		5C05E4AE1B35F22900D97E13 /* EvdelUITests */ = {
+			isa = PBXGroup;
+			children = (
+				5C05E4AF1B35F22900D97E13 /* EvdelUITests.swift */,
+				5C05E4B11B35F22900D97E13 /* Info.plist */,
+			);
+			path = EvdelUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5C05E48E1B35F22900D97E13 /* Evdel */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5C05E4B41B35F22900D97E13 /* Build configuration list for PBXNativeTarget "Evdel" */;
+			buildPhases = (
+				5C05E48B1B35F22900D97E13 /* Sources */,
+				5C05E48C1B35F22900D97E13 /* Frameworks */,
+				5C05E48D1B35F22900D97E13 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Evdel;
+			productName = Evdel;
+			productReference = 5C05E48F1B35F22900D97E13 /* Evdel.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5C05E49F1B35F22900D97E13 /* EvdelTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5C05E4B71B35F22900D97E13 /* Build configuration list for PBXNativeTarget "EvdelTests" */;
+			buildPhases = (
+				5C05E49C1B35F22900D97E13 /* Sources */,
+				5C05E49D1B35F22900D97E13 /* Frameworks */,
+				5C05E49E1B35F22900D97E13 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5C05E4A21B35F22900D97E13 /* PBXTargetDependency */,
+			);
+			name = EvdelTests;
+			productName = EvdelTests;
+			productReference = 5C05E4A01B35F22900D97E13 /* EvdelTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		5C05E4AA1B35F22900D97E13 /* EvdelUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5C05E4BA1B35F22900D97E13 /* Build configuration list for PBXNativeTarget "EvdelUITests" */;
+			buildPhases = (
+				5C05E4A71B35F22900D97E13 /* Sources */,
+				5C05E4A81B35F22900D97E13 /* Frameworks */,
+				5C05E4A91B35F22900D97E13 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5C05E4AD1B35F22900D97E13 /* PBXTargetDependency */,
+			);
+			name = EvdelUITests;
+			productName = EvdelUITests;
+			productReference = 5C05E4AB1B35F22900D97E13 /* EvdelUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5C05E4871B35F22900D97E13 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = "Sash Zats";
+				TargetAttributes = {
+					5C05E48E1B35F22900D97E13 = {
+						CreatedOnToolsVersion = 7.0;
+					};
+					5C05E49F1B35F22900D97E13 = {
+						CreatedOnToolsVersion = 7.0;
+						TestTargetID = 5C05E48E1B35F22900D97E13;
+					};
+					5C05E4AA1B35F22900D97E13 = {
+						CreatedOnToolsVersion = 7.0;
+						TestTargetID = 5C05E48E1B35F22900D97E13;
+					};
+				};
+			};
+			buildConfigurationList = 5C05E48A1B35F22900D97E13 /* Build configuration list for PBXProject "Evdel" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5C05E4861B35F22900D97E13;
+			productRefGroup = 5C05E4901B35F22900D97E13 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5C05E48E1B35F22900D97E13 /* Evdel */,
+				5C05E49F1B35F22900D97E13 /* EvdelTests */,
+				5C05E4AA1B35F22900D97E13 /* EvdelUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5C05E48D1B35F22900D97E13 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5C05E4971B35F22900D97E13 /* Assets.xcassets in Resources */,
+				5C05E49A1B35F22900D97E13 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5C05E49E1B35F22900D97E13 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5C05E4A91B35F22900D97E13 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5C05E48B1B35F22900D97E13 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5C05E4951B35F22900D97E13 /* ViewController.swift in Sources */,
+				5C05E4931B35F22900D97E13 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5C05E49C1B35F22900D97E13 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5C05E4A51B35F22900D97E13 /* EvdelTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5C05E4A71B35F22900D97E13 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5C05E4B01B35F22900D97E13 /* EvdelUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5C05E4A21B35F22900D97E13 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5C05E48E1B35F22900D97E13 /* Evdel */;
+			targetProxy = 5C05E4A11B35F22900D97E13 /* PBXContainerItemProxy */;
+		};
+		5C05E4AD1B35F22900D97E13 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5C05E48E1B35F22900D97E13 /* Evdel */;
+			targetProxy = 5C05E4AC1B35F22900D97E13 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5C05E4981B35F22900D97E13 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5C05E4991B35F22900D97E13 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5C05E4B21B35F22900D97E13 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5C05E4B31B35F22900D97E13 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		5C05E4B51B35F22900D97E13 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Evdel/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zats.Evdel;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		5C05E4B61B35F22900D97E13 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Evdel/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zats.Evdel;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		5C05E4B81B35F22900D97E13 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = EvdelTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zats.EvdelTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Evdel.app/Contents/MacOS/Evdel";
+			};
+			name = Debug;
+		};
+		5C05E4B91B35F22900D97E13 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = EvdelTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zats.EvdelTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Evdel.app/Contents/MacOS/Evdel";
+			};
+			name = Release;
+		};
+		5C05E4BB1B35F22900D97E13 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = EvdelUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zats.EvdelUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Evdel;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		5C05E4BC1B35F22900D97E13 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = EvdelUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zats.EvdelUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Evdel;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5C05E48A1B35F22900D97E13 /* Build configuration list for PBXProject "Evdel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5C05E4B21B35F22900D97E13 /* Debug */,
+				5C05E4B31B35F22900D97E13 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5C05E4B41B35F22900D97E13 /* Build configuration list for PBXNativeTarget "Evdel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5C05E4B51B35F22900D97E13 /* Debug */,
+				5C05E4B61B35F22900D97E13 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		5C05E4B71B35F22900D97E13 /* Build configuration list for PBXNativeTarget "EvdelTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5C05E4B81B35F22900D97E13 /* Debug */,
+				5C05E4B91B35F22900D97E13 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		5C05E4BA1B35F22900D97E13 /* Build configuration list for PBXNativeTarget "EvdelUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5C05E4BB1B35F22900D97E13 /* Debug */,
+				5C05E4BC1B35F22900D97E13 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5C05E4871B35F22900D97E13 /* Project object */;
+}
