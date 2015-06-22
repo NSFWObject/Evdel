@@ -764,39 +764,10 @@
                         <animations/>
                     </view>
                     <connections>
-                        <outlet property="controlsContainerView" destination="OTm-HU-28j" id="fmK-8g-mpl"/>
-                        <outlet property="fileModeSegmentedControl" destination="Dka-I6-FzG" id="TC6-LN-b9x"/>
                         <outlet property="textView" destination="ofL-11-Jae" id="PPZ-JM-rYE"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
-                <customView id="OTm-HU-28j">
-                    <rect key="frame" x="0.0" y="0.0" width="193" height="96"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <subviews>
-                        <segmentedControl verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dka-I6-FzG">
-                            <rect key="frame" x="19" y="36" width="153" height="23"/>
-                            <animations/>
-                            <segmentedCell key="cell" borderStyle="border" alignment="left" style="capsule" trackingMode="selectOne" id="5p0-dG-vi9">
-                                <font key="font" metaFont="system"/>
-                                <segments>
-                                    <segment label="Left"/>
-                                    <segment label="Both" selected="YES" tag="1"/>
-                                    <segment label="Right"/>
-                                </segments>
-                            </segmentedCell>
-                            <connections>
-                                <action selector="fileModeSegmentedControlAction:" target="XfG-lQ-9wD" id="qgY-n5-Udl"/>
-                            </connections>
-                        </segmentedControl>
-                    </subviews>
-                    <constraints>
-                        <constraint firstItem="Dka-I6-FzG" firstAttribute="leading" secondItem="OTm-HU-28j" secondAttribute="leading" constant="20" id="3Xc-TY-szk"/>
-                        <constraint firstAttribute="trailing" secondItem="Dka-I6-FzG" secondAttribute="trailing" constant="20" id="G8Q-o8-Yyb"/>
-                        <constraint firstItem="Dka-I6-FzG" firstAttribute="centerY" secondItem="OTm-HU-28j" secondAttribute="centerY" id="aTf-gy-TVg"/>
-                    </constraints>
-                    <animations/>
-                </customView>
             </objects>
             <point key="canvasLocation" x="75" y="655"/>
         </scene>
