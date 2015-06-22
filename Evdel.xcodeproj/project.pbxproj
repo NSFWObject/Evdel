@@ -13,6 +13,11 @@
 		5C05E49A1B35F22900D97E13 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C05E4981B35F22900D97E13 /* Main.storyboard */; };
 		5C05E4A51B35F22900D97E13 /* EvdelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C05E4A41B35F22900D97E13 /* EvdelTests.swift */; };
 		5C05E4B01B35F22900D97E13 /* EvdelUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C05E4AF1B35F22900D97E13 /* EvdelUITests.swift */; };
+		5CC483781B37A35E00F989CF /* WindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC483771B37A35E00F989CF /* WindowController.swift */; };
+		5CC4837D1B37AAE100F989CF /* TitlebarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC4837C1B37AAE100F989CF /* TitlebarViewController.swift */; };
+		5CCC825D1B360A1000C8788C /* DiffMatchPatch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CCC82561B360A0000C8788C /* DiffMatchPatch.framework */; };
+		5CCC825E1B360A1000C8788C /* DiffMatchPatch.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5CCC82561B360A0000C8788C /* DiffMatchPatch.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5CE736661B373C0C004793F6 /* DiffService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE736651B373C0C004793F6 /* DiffService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,7 +35,56 @@
 			remoteGlobalIDString = 5C05E48E1B35F22900D97E13;
 			remoteInfo = Evdel;
 		};
+		5CCC82551B360A0000C8788C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5CCC824F1B3609FF00C8788C /* DiffMatchPatch.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8DC2EF5B0486A6940098B216;
+			remoteInfo = DiffMatchPatch;
+		};
+		5CCC82571B360A0000C8788C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5CCC824F1B3609FF00C8788C /* DiffMatchPatch.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3D5BC0AF128CA8E200B8F5FF;
+			remoteInfo = DiffMatchPatchTest;
+		};
+		5CCC82591B360A0000C8788C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5CCC824F1B3609FF00C8788C /* DiffMatchPatch.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3D96F3A212AFC68900C3E5C0;
+			remoteInfo = speedtest;
+		};
+		5CCC825B1B360A0800C8788C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5CCC824F1B3609FF00C8788C /* DiffMatchPatch.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 8DC2EF4F0486A6940098B216;
+			remoteInfo = DiffMatchPatch;
+		};
+		5CCC825F1B360A1000C8788C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5CCC824F1B3609FF00C8788C /* DiffMatchPatch.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 8DC2EF4F0486A6940098B216;
+			remoteInfo = DiffMatchPatch;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		5C05E4C21B35F5DD00D97E13 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				5CCC825E1B360A1000C8788C /* DiffMatchPatch.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		5C05E48F1B35F22900D97E13 /* Evdel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Evdel.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -45,6 +99,11 @@
 		5C05E4AB1B35F22900D97E13 /* EvdelUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EvdelUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C05E4AF1B35F22900D97E13 /* EvdelUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvdelUITests.swift; sourceTree = "<group>"; };
 		5C05E4B11B35F22900D97E13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5C05E4CA1B36055300D97E13 /* Evdel.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Evdel.playground; sourceTree = "<group>"; };
+		5CC483771B37A35E00F989CF /* WindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindowController.swift; sourceTree = "<group>"; };
+		5CC4837C1B37AAE100F989CF /* TitlebarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitlebarViewController.swift; sourceTree = "<group>"; };
+		5CCC824F1B3609FF00C8788C /* DiffMatchPatch.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = DiffMatchPatch.xcodeproj; path = "Carthage/Checkouts/google-diff-match-patch/objectivec/DiffMatchPatch.xcodeproj"; sourceTree = "<group>"; };
+		5CE736651B373C0C004793F6 /* DiffService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiffService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +111,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5CCC825D1B360A1000C8788C /* DiffMatchPatch.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,7 +135,9 @@
 		5C05E4861B35F22900D97E13 = {
 			isa = PBXGroup;
 			children = (
+				5C05E4CA1B36055300D97E13 /* Evdel.playground */,
 				5C05E4911B35F22900D97E13 /* Evdel */,
+				5C05E4BD1B35F5CD00D97E13 /* Frameworks */,
 				5C05E4A31B35F22900D97E13 /* EvdelTests */,
 				5C05E4AE1B35F22900D97E13 /* EvdelUITests */,
 				5C05E4901B35F22900D97E13 /* Products */,
@@ -95,8 +157,12 @@
 		5C05E4911B35F22900D97E13 /* Evdel */ = {
 			isa = PBXGroup;
 			children = (
+				5C05E4C31B36021F00D97E13 /* Resources */,
 				5C05E4921B35F22900D97E13 /* AppDelegate.swift */,
+				5CC483771B37A35E00F989CF /* WindowController.swift */,
 				5C05E4941B35F22900D97E13 /* ViewController.swift */,
+				5CC4837C1B37AAE100F989CF /* TitlebarViewController.swift */,
+				5CE736651B373C0C004793F6 /* DiffService.swift */,
 				5C05E4961B35F22900D97E13 /* Assets.xcassets */,
 				5C05E4981B35F22900D97E13 /* Main.storyboard */,
 				5C05E49B1B35F22900D97E13 /* Info.plist */,
@@ -122,6 +188,32 @@
 			path = EvdelUITests;
 			sourceTree = "<group>";
 		};
+		5C05E4BD1B35F5CD00D97E13 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5CCC824F1B3609FF00C8788C /* DiffMatchPatch.xcodeproj */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5C05E4C31B36021F00D97E13 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Resources;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		5CCC82501B3609FF00C8788C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5CCC82561B360A0000C8788C /* DiffMatchPatch.framework */,
+				5CCC82581B360A0000C8788C /* DiffMatchPatchTest.octest */,
+				5CCC825A1B360A0000C8788C /* speedtest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,10 +224,13 @@
 				5C05E48B1B35F22900D97E13 /* Sources */,
 				5C05E48C1B35F22900D97E13 /* Frameworks */,
 				5C05E48D1B35F22900D97E13 /* Resources */,
+				5C05E4C21B35F5DD00D97E13 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				5CCC825C1B360A0800C8788C /* PBXTargetDependency */,
+				5CCC82601B360A1000C8788C /* PBXTargetDependency */,
 			);
 			name = Evdel;
 			productName = Evdel;
@@ -189,6 +284,7 @@
 				TargetAttributes = {
 					5C05E48E1B35F22900D97E13 = {
 						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = 5KE88HWMKJ;
 					};
 					5C05E49F1B35F22900D97E13 = {
 						CreatedOnToolsVersion = 7.0;
@@ -211,6 +307,12 @@
 			mainGroup = 5C05E4861B35F22900D97E13;
 			productRefGroup = 5C05E4901B35F22900D97E13 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 5CCC82501B3609FF00C8788C /* Products */;
+					ProjectRef = 5CCC824F1B3609FF00C8788C /* DiffMatchPatch.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				5C05E48E1B35F22900D97E13 /* Evdel */,
@@ -219,6 +321,30 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		5CCC82561B360A0000C8788C /* DiffMatchPatch.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = DiffMatchPatch.framework;
+			remoteRef = 5CCC82551B360A0000C8788C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		5CCC82581B360A0000C8788C /* DiffMatchPatchTest.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = DiffMatchPatchTest.octest;
+			remoteRef = 5CCC82571B360A0000C8788C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		5CCC825A1B360A0000C8788C /* speedtest */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = speedtest;
+			remoteRef = 5CCC82591B360A0000C8788C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		5C05E48D1B35F22900D97E13 /* Resources */ = {
@@ -251,8 +377,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5CC4837D1B37AAE100F989CF /* TitlebarViewController.swift in Sources */,
 				5C05E4951B35F22900D97E13 /* ViewController.swift in Sources */,
+				5CC483781B37A35E00F989CF /* WindowController.swift in Sources */,
 				5C05E4931B35F22900D97E13 /* AppDelegate.swift in Sources */,
+				5CE736661B373C0C004793F6 /* DiffService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,6 +413,16 @@
 			isa = PBXTargetDependency;
 			target = 5C05E48E1B35F22900D97E13 /* Evdel */;
 			targetProxy = 5C05E4AC1B35F22900D97E13 /* PBXContainerItemProxy */;
+		};
+		5CCC825C1B360A0800C8788C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = DiffMatchPatch;
+			targetProxy = 5CCC825B1B360A0800C8788C /* PBXContainerItemProxy */;
+		};
+		5CCC82601B360A1000C8788C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = DiffMatchPatch;
+			targetProxy = 5CCC825F1B360A1000C8788C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -384,6 +523,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = "${SRCROOT}/Carthage/Build/Mac";
 				INFOPLIST_FILE = Evdel/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zats.Evdel;
@@ -396,6 +536,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = "${SRCROOT}/Carthage/Build/Mac";
 				INFOPLIST_FILE = Evdel/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zats.Evdel;
@@ -474,6 +615,7 @@
 				5C05E4B61B35F22900D97E13 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5C05E4B71B35F22900D97E13 /* Build configuration list for PBXNativeTarget "EvdelTests" */ = {
 			isa = XCConfigurationList;
@@ -482,6 +624,7 @@
 				5C05E4B91B35F22900D97E13 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5C05E4BA1B35F22900D97E13 /* Build configuration list for PBXNativeTarget "EvdelUITests" */ = {
 			isa = XCConfigurationList;
@@ -490,6 +633,7 @@
 				5C05E4BC1B35F22900D97E13 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
