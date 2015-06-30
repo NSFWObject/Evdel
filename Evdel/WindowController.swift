@@ -26,9 +26,7 @@ class WindowController: NSWindowController {
     }
 
     @IBAction func fileModeSegmentedControlAction(sender: NSSegmentedControl) {
-        guard let controller = self.contentViewController as? DiffViewController
-
-else {
+        guard let controller = self.contentViewController as? DiffViewController else {
             assertionFailure("No Controller found!")
             return
         }
