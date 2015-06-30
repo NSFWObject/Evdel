@@ -39,11 +39,11 @@ else {
         }
         switch fileMode {
         case .Left:
-            controller.fileMode = [.Equal, .Delete]
+            controller.fileMode = [.None, .Deletion]
         case .Both:
-            controller.fileMode = [.Equal, .Delete, .Insert]
+            controller.fileMode = [.None, .Deletion, .Insertion]
         case .Right:
-            controller.fileMode = [.Equal, .Insert]
+            controller.fileMode = [.None, .Insertion]
         }
     }
 }

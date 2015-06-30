@@ -24,7 +24,7 @@ public class DiffService {
 
     let engine: DiffMatchPatch = DiffMatchPatch()
     
-    public func diff(left left: String, right: String, options: DiffOptions? = nil) -> [DMPDiff] {
+    public func diff(left left: String, right: String, options: DiffOptions? = nil) -> [Diff] {
         let arr = engine.diff_mainOfOldString(left, andNewString: right)
         engine.diff_cleanupEfficiency(arr)
         engine.diff_cleanupSemantic(arr)
@@ -38,9 +38,8 @@ public class DiffService {
                 result = DiffMatchPatch.commonInsertionBubblesDown(result)
             }
         }
-        return result
+        return result.map{$0.toDiff()}
     }
-    
 }
 
 extension DiffMatchPatch {

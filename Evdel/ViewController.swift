@@ -7,7 +7,6 @@
 //
 
 import Cocoa
-import DiffMatchPatch
 
 
 class DiffViewController: NSViewController {
@@ -19,7 +18,7 @@ class DiffViewController: NSViewController {
 
     let diffService: DiffService = DiffService()
     
-    var fileMode: [DMPOperation] = [.Insert, .Equal, .Delete] {
+    var fileMode: [Diff.DiffType] = [.Insertion, .None, .Deletion] {
         didSet {
             reloadDiff()
         }
@@ -49,10 +48,10 @@ class DiffViewController: NSViewController {
         }
     }
     
-    private func displayDiffs(diffs: [DMPDiff], allowedOperations: [DMPOperation]) {
+    private func displayDiffs(diffs: [Diff], allowedOperations: [Diff.DiffType]) {
         let attributedString = NSMutableAttributedString()
         for diff in diffs {
-            if allowedOperations.contains({ $0 == diff.operation }) {
+            if allowedOperations.contains({ $0 == diff.type }) {
                 attributedString.appendAttributedString(attributedStringForDiff(diff))
             }
         }
@@ -66,12 +65,12 @@ class DiffViewController: NSViewController {
         textView.textStorage?.setAttributedString(attributedString)
     }
     
-    private func attributedStringForDiff(diff: DMPDiff) -> NSAttributedString {
-        var attributes: [String: AnyObject] = [DiffAttachmentAttributeName: diff]
-        switch diff.operation {
-        case .Insert:
+    private func attributedStringForDiff(diff: Diff) -> NSAttributedString {
+        var attributes: [String: AnyObject] = [DiffAttachmentAttributeName: DiffObject(diff: diff)]
+        switch diff.type {
+        case .Insertion:
             attributes[NSBackgroundColorAttributeName] = NSColor(calibratedRed:0.86, green:0.959, blue:0.807, alpha:1)
-        case .Delete:
+        case .Deletion:
             attributes[NSBackgroundColorAttributeName] = NSColor(calibratedRed:0.999, green:0.878, blue:0.856, alpha:1)
         default:
             break
@@ -79,7 +78,7 @@ class DiffViewController: NSViewController {
         return NSAttributedString(string: diff.text, attributes: attributes)
     }
     
-    private func diffsForFilePair(leftPath leftPath: String, rightPath: String) -> [DMPDiff]? {
+    private func diffsForFilePair(leftPath leftPath: String, rightPath: String) -> [Diff]? {
         guard let left = string(path: leftPath), right = string(path: rightPath) else {
             return nil
         }

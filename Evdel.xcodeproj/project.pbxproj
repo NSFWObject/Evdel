@@ -13,6 +13,8 @@
 		5C05E49A1B35F22900D97E13 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C05E4981B35F22900D97E13 /* Main.storyboard */; };
 		5C05E4A51B35F22900D97E13 /* EvdelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C05E4A41B35F22900D97E13 /* EvdelTests.swift */; };
 		5C05E4B01B35F22900D97E13 /* EvdelUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C05E4AF1B35F22900D97E13 /* EvdelUITests.swift */; };
+		5C18134F1B426B3800E60F68 /* Diffing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C18134E1B426B3800E60F68 /* Diffing.swift */; };
+		5C1813511B426BE500E60F68 /* DiffMatchPatch+Diffing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1813501B426BE500E60F68 /* DiffMatchPatch+Diffing.swift */; };
 		5CC483781B37A35E00F989CF /* WindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC483771B37A35E00F989CF /* WindowController.swift */; };
 		5CC4837D1B37AAE100F989CF /* TitlebarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC4837C1B37AAE100F989CF /* TitlebarViewController.swift */; };
 		5CCD8F4B1B3BDAE9001FFDB6 /* DiffMatchPatch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CCD8F491B3BDAE3001FFDB6 /* DiffMatchPatch.framework */; };
@@ -65,6 +67,8 @@
 		5C05E4AF1B35F22900D97E13 /* EvdelUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvdelUITests.swift; sourceTree = "<group>"; };
 		5C05E4B11B35F22900D97E13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5C05E4CA1B36055300D97E13 /* Evdel.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Evdel.playground; sourceTree = "<group>"; };
+		5C18134E1B426B3800E60F68 /* Diffing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Diffing.swift; sourceTree = "<group>"; };
+		5C1813501B426BE500E60F68 /* DiffMatchPatch+Diffing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DiffMatchPatch+Diffing.swift"; sourceTree = "<group>"; };
 		5CC483771B37A35E00F989CF /* WindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindowController.swift; sourceTree = "<group>"; };
 		5CC4837C1B37AAE100F989CF /* TitlebarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitlebarViewController.swift; sourceTree = "<group>"; };
 		5CCD8F491B3BDAE3001FFDB6 /* DiffMatchPatch.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DiffMatchPatch.framework; path = Carthage/Build/Mac/DiffMatchPatch.framework; sourceTree = "<group>"; };
@@ -126,7 +130,7 @@
 				5CC483771B37A35E00F989CF /* WindowController.swift */,
 				5C05E4941B35F22900D97E13 /* ViewController.swift */,
 				5CC4837C1B37AAE100F989CF /* TitlebarViewController.swift */,
-				5CE736651B373C0C004793F6 /* DiffService.swift */,
+				5C18134D1B426B2D00E60F68 /* Diffing */,
 				5C05E4961B35F22900D97E13 /* Assets.xcassets */,
 				5C05E4981B35F22900D97E13 /* Main.storyboard */,
 				5C05E49B1B35F22900D97E13 /* Info.plist */,
@@ -158,6 +162,16 @@
 				5CCD8F491B3BDAE3001FFDB6 /* DiffMatchPatch.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5C18134D1B426B2D00E60F68 /* Diffing */ = {
+			isa = PBXGroup;
+			children = (
+				5CE736651B373C0C004793F6 /* DiffService.swift */,
+				5C1813501B426BE500E60F68 /* DiffMatchPatch+Diffing.swift */,
+				5C18134E1B426B3800E60F68 /* Diffing.swift */,
+			);
+			name = Diffing;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -297,6 +311,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				5CC4837D1B37AAE100F989CF /* TitlebarViewController.swift in Sources */,
+				5C1813511B426BE500E60F68 /* DiffMatchPatch+Diffing.swift in Sources */,
+				5C18134F1B426B3800E60F68 /* Diffing.swift in Sources */,
 				5C05E4951B35F22900D97E13 /* ViewController.swift in Sources */,
 				5CC483781B37A35E00F989CF /* WindowController.swift in Sources */,
 				5C05E4931B35F22900D97E13 /* AppDelegate.swift in Sources */,
