@@ -16,7 +16,6 @@
 		5C18134F1B426B3800E60F68 /* Diffing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C18134E1B426B3800E60F68 /* Diffing.swift */; };
 		5C1813511B426BE500E60F68 /* DiffMatchPatch+Diffing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1813501B426BE500E60F68 /* DiffMatchPatch+Diffing.swift */; };
 		5CC483781B37A35E00F989CF /* WindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC483771B37A35E00F989CF /* WindowController.swift */; };
-		5CC4837D1B37AAE100F989CF /* TitlebarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC4837C1B37AAE100F989CF /* TitlebarViewController.swift */; };
 		5CCD8F4B1B3BDAE9001FFDB6 /* DiffMatchPatch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CCD8F491B3BDAE3001FFDB6 /* DiffMatchPatch.framework */; };
 		5CCD8F4C1B3BDAE9001FFDB6 /* DiffMatchPatch.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5CCD8F491B3BDAE3001FFDB6 /* DiffMatchPatch.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5CE736661B373C0C004793F6 /* DiffService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE736651B373C0C004793F6 /* DiffService.swift */; };
@@ -70,7 +69,6 @@
 		5C18134E1B426B3800E60F68 /* Diffing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Diffing.swift; sourceTree = "<group>"; };
 		5C1813501B426BE500E60F68 /* DiffMatchPatch+Diffing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DiffMatchPatch+Diffing.swift"; sourceTree = "<group>"; };
 		5CC483771B37A35E00F989CF /* WindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindowController.swift; sourceTree = "<group>"; };
-		5CC4837C1B37AAE100F989CF /* TitlebarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitlebarViewController.swift; sourceTree = "<group>"; };
 		5CCD8F491B3BDAE3001FFDB6 /* DiffMatchPatch.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DiffMatchPatch.framework; path = Carthage/Build/Mac/DiffMatchPatch.framework; sourceTree = "<group>"; };
 		5CE736651B373C0C004793F6 /* DiffService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiffService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -129,7 +127,6 @@
 				5C05E4921B35F22900D97E13 /* AppDelegate.swift */,
 				5CC483771B37A35E00F989CF /* WindowController.swift */,
 				5C05E4941B35F22900D97E13 /* ViewController.swift */,
-				5CC4837C1B37AAE100F989CF /* TitlebarViewController.swift */,
 				5C18134D1B426B2D00E60F68 /* Diffing */,
 				5CDB834C1B427580001F1D39 /* Resources */,
 			);
@@ -318,7 +315,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5CC4837D1B37AAE100F989CF /* TitlebarViewController.swift in Sources */,
 				5C1813511B426BE500E60F68 /* DiffMatchPatch+Diffing.swift in Sources */,
 				5C18134F1B426B3800E60F68 /* Diffing.swift in Sources */,
 				5C05E4951B35F22900D97E13 /* ViewController.swift in Sources */,
