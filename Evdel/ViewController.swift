@@ -30,6 +30,14 @@ class DiffViewController: NSViewController {
         reloadDiff()
     }
     
+    // MARK: - Public 
+    
+    func openDiff(leftPath leftPath: String, rightPath: String) {
+        if let diffs = diffsForFilePair(leftPath: leftPath, rightPath: rightPath) {
+            displayDiffs(diffs, allowedOperations: fileMode)
+        }
+    }
+    
     // MARK: - Private    
     
     private func reloadDiff() {
@@ -39,13 +47,7 @@ class DiffViewController: NSViewController {
             assertionFailure("Too few arguments! Expected at least 3, got \(arguments.count)")
             return
         }
-        
-        let leftPath = arguments[3]
-        let rightPath = arguments[4]
-        print("Opening \(leftPath) \(rightPath)")
-        if let diffs = diffsForFilePair(leftPath: leftPath, rightPath: rightPath) {
-            displayDiffs(diffs, allowedOperations: fileMode)
-        }
+        openDiff(leftPath: arguments[3], rightPath: arguments[4])
     }
     
     private func displayDiffs(diffs: [Diff], allowedOperations: [Diff.DiffType]) {
