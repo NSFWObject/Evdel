@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  DiffViewController.swift
 //  Evdel
 //
 //  Created by Sash Zats on 6/20/15.
@@ -9,12 +9,15 @@
 import Cocoa
 import DiffMatchPatch
 
-class ViewController: NSViewController {
+
+class DiffViewController: NSViewController {
     
     let DiffAttachmentAttributeName = "DiffAttachmentAttributeName"
     
-    let diffService: DiffService = DiffService()
     @IBOutlet var textView: NSTextView!
+    @IBOutlet weak var textScrollView: NSScrollView!
+
+    let diffService: DiffService = DiffService()
     
     var fileMode: [DMPOperation] = [.Insert, .Equal, .Delete] {
         didSet {
@@ -32,14 +35,16 @@ class ViewController: NSViewController {
     
     private func reloadDiff() {
         let arguments = NSProcessInfo.processInfo().arguments
-        if arguments.count < 3 {
+        print("\n\(arguments)\n")
+        if arguments.count < 5 {
             assertionFailure("Too few arguments! Expected at least 3, got \(arguments.count)")
             return
         }
         
-        
-        
-        if let diffs = diffsForFilePair(leftPath: arguments[1], rightPath: arguments[2]) {
+        let leftPath = arguments[3]
+        let rightPath = arguments[4]
+        print("Opening \(leftPath) \(rightPath)")
+        if let diffs = diffsForFilePair(leftPath: leftPath, rightPath: rightPath) {
             displayDiffs(diffs, allowedOperations: fileMode)
         }
     }
@@ -53,11 +58,11 @@ class ViewController: NSViewController {
         }
 
         let globalAttributes = [
-            NSFontAttributeName: NSFont(name: "Menlo", size: 10)!,
+            NSFontAttributeName: textView.font!,
+            NSForegroundColorAttributeName: NSColor.grayColor()
         ]
         let range = NSRange(location:0, length: attributedString.length)
         attributedString.addAttributes(globalAttributes, range: range)
-        
         textView.textStorage?.setAttributedString(attributedString)
     }
     
@@ -78,16 +83,38 @@ class ViewController: NSViewController {
         guard let left = string(path: leftPath), right = string(path: rightPath) else {
             return nil
         }
-        return diffService.diff(left: left, right: right)
+        return diffService.diff(left: left, right: right, options: [DiffOptions.EndOfOneDiffIsBeginningOfAnother])
     }
     
     private func string(path path: String) -> String? {
+        let manager = NSFileManager.defaultManager()
+        var isDirectory: ObjCBool = false
+        if !manager.fileExistsAtPath(path, isDirectory: &isDirectory) || isDirectory {
+            return nil
+        }
         do {
-            return try String(contentsOfFile: path)
+            return try String(contentsOfFile: path, encoding: NSUTF8StringEncoding)
         } catch (let e) {
-            print(e)
+            print("Failed to read the string from \(path): \(e)")
             return nil
         }
     }
 
+}
+
+extension DiffViewController {
+
+    @IBAction func makeTextSmaller(sender: AnyObject) {
+//        textView.makeFontSmaller()
+    }
+    
+    @IBAction func makeTextLarger(sender: AnyObject) {
+//        textView.makeFontLarger()
+    }
+
+    @IBAction func toggleWordWrap(sender: NSMenuItem) {
+        let wordWrappingEnabled = sender.state == NSOffState
+        sender.state = wordWrappingEnabled ? NSOnState : NSOffState
+//        textView.lineBreakMode = wordWrappingEnabled ? NSLineBreakMode.ByWordWrapping : NSLineBreakMode.ByClipping
+    }
 }

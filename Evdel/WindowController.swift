@@ -24,9 +24,11 @@ class WindowController: NSWindowController {
         
         window.titleVisibility = .Hidden
     }
-    
+
     @IBAction func fileModeSegmentedControlAction(sender: NSSegmentedControl) {
-        guard let controller = self.contentViewController as? ViewController else {
+        guard let controller = self.contentViewController as? DiffViewController
+
+else {
             assertionFailure("No Controller found!")
             return
         }
