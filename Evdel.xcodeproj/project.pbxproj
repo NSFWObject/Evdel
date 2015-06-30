@@ -18,6 +18,7 @@
 		5CC483781B37A35E00F989CF /* WindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC483771B37A35E00F989CF /* WindowController.swift */; };
 		5CCD8F4B1B3BDAE9001FFDB6 /* DiffMatchPatch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CCD8F491B3BDAE3001FFDB6 /* DiffMatchPatch.framework */; };
 		5CCD8F4C1B3BDAE9001FFDB6 /* DiffMatchPatch.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5CCD8F491B3BDAE3001FFDB6 /* DiffMatchPatch.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5CDB834F1B42768C001F1D39 /* DefferedFileOpeningService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDB834E1B42768C001F1D39 /* DefferedFileOpeningService.swift */; };
 		5CE736661B373C0C004793F6 /* DiffService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE736651B373C0C004793F6 /* DiffService.swift */; };
 /* End PBXBuildFile section */
 
@@ -70,6 +71,8 @@
 		5C1813501B426BE500E60F68 /* DiffMatchPatch+Diffing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DiffMatchPatch+Diffing.swift"; sourceTree = "<group>"; };
 		5CC483771B37A35E00F989CF /* WindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindowController.swift; sourceTree = "<group>"; };
 		5CCD8F491B3BDAE3001FFDB6 /* DiffMatchPatch.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DiffMatchPatch.framework; path = Carthage/Build/Mac/DiffMatchPatch.framework; sourceTree = "<group>"; };
+		5CDB834E1B42768C001F1D39 /* DefferedFileOpeningService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefferedFileOpeningService.swift; sourceTree = "<group>"; };
+		5CDB83501B4279BA001F1D39 /* Evdel.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Evdel.entitlements; sourceTree = "<group>"; };
 		5CE736651B373C0C004793F6 /* DiffService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiffService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -124,10 +127,12 @@
 		5C05E4911B35F22900D97E13 /* Evdel */ = {
 			isa = PBXGroup;
 			children = (
+				5CDB83501B4279BA001F1D39 /* Evdel.entitlements */,
 				5C05E4921B35F22900D97E13 /* AppDelegate.swift */,
 				5CC483771B37A35E00F989CF /* WindowController.swift */,
 				5C05E4941B35F22900D97E13 /* ViewController.swift */,
 				5C18134D1B426B2D00E60F68 /* Diffing */,
+				5CDB834D1B42766F001F1D39 /* Services */,
 				5CDB834C1B427580001F1D39 /* Resources */,
 			);
 			path = Evdel;
@@ -177,6 +182,14 @@
 				5C05E49B1B35F22900D97E13 /* Info.plist */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		5CDB834D1B42766F001F1D39 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				5CDB834E1B42768C001F1D39 /* DefferedFileOpeningService.swift */,
+			);
+			name = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,7 +263,7 @@
 						DevelopmentTeam = 5KE88HWMKJ;
 						SystemCapabilities = {
 							com.apple.Sandbox = {
-								enabled = 0;
+								enabled = 1;
 							};
 						};
 					};
@@ -320,6 +333,7 @@
 				5C05E4951B35F22900D97E13 /* ViewController.swift in Sources */,
 				5CC483781B37A35E00F989CF /* WindowController.swift in Sources */,
 				5C05E4931B35F22900D97E13 /* AppDelegate.swift in Sources */,
+				5CDB834F1B42768C001F1D39 /* DefferedFileOpeningService.swift in Sources */,
 				5CE736661B373C0C004793F6 /* DiffService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -451,6 +465,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Evdel/Evdel.entitlements;
 				CODE_SIGN_IDENTITY = "Developer ID Application";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
@@ -468,6 +483,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Evdel/Evdel.entitlements;
 				CODE_SIGN_IDENTITY = "Developer ID Application";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;

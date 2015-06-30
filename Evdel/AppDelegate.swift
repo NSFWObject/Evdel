@@ -22,5 +22,15 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationShouldTerminateAfterLastWindowClosed(sender: NSApplication) -> Bool {
         return true
     }
+    
+    func application(sender: NSApplication, openFiles filenames: [String]) {
+        if filenames.count != 2 {
+            NSApp.replyToOpenOrPrint(.Failure)
+            return
+        }
+        FileOpeningService.sharedInstance.deferredPaths = filenames
+        NSApp.replyToOpenOrPrint(.Success)
+
+    }
 }
 

@@ -23,11 +23,26 @@ class DiffViewController: NSViewController {
             reloadDiff()
         }
     }
+    
+    var diffPaths: [String]?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        if FileOpeningService.sharedInstance.deferredPaths != nil {
+            diffPaths = FileOpeningService.sharedInstance.deferredPaths!
+        } else {
+            let arguments = NSProcessInfo.processInfo().arguments
+            if arguments.count < 5 {
+                return
+            }
+            diffPaths = [arguments[3], arguments[4]]
+        }
+        
         reloadDiff()
+        
+        //setup notifications
+        FileOpeningService.sharedInstance.openHandler = openFileHandler
     }
     
     // MARK: - Public 
@@ -38,16 +53,21 @@ class DiffViewController: NSViewController {
         }
     }
     
+    
+    // MARK: - Handlers
+
+    func openFileHandler(service: FileOpeningService) {
+        if let paths = service.deferredPaths where paths.count == 2 {
+            openDiff(leftPath: paths[0], rightPath: paths[1])
+        }
+    }
+    
     // MARK: - Private    
     
     private func reloadDiff() {
-        let arguments = NSProcessInfo.processInfo().arguments
-        print("\n\(arguments)\n")
-        if arguments.count < 5 {
-            assertionFailure("Too few arguments! Expected at least 3, got \(arguments.count)")
-            return
+        if let diffPaths = diffPaths where diffPaths.count == 2 {
+            openDiff(leftPath: diffPaths[0], rightPath: diffPaths[1])
         }
-        openDiff(leftPath: arguments[3], rightPath: arguments[4])
     }
     
     private func displayDiffs(diffs: [Diff], allowedOperations: [Diff.DiffType]) {
