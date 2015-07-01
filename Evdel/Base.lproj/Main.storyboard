@@ -55,17 +55,67 @@
                                     </items>
                                 </menu>
                             </menuItem>
-                            <menuItem title="File" id="dMs-cI-mzQ">
+                            <menuItem title="File" id="rf6-0T-QVh">
                                 <modifierMask key="keyEquivalentModifierMask"/>
-                            </menuItem>
-                            <menuItem title="Edit" id="5QF-Oa-p0T">
-                                <modifierMask key="keyEquivalentModifierMask"/>
-                            </menuItem>
-                            <menuItem title="Format" id="jxT-CU-nIS">
-                                <modifierMask key="keyEquivalentModifierMask"/>
-                            </menuItem>
-                            <menuItem title="View" id="H8h-7b-M4v">
-                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <menu key="submenu" title="File" id="8MT-J4-lpn">
+                                    <items>
+                                        <menuItem title="New" keyEquivalent="n" id="vUb-lx-uHH">
+                                            <connections>
+                                                <action selector="newDocument:" target="Ady-hI-5gd" id="WzT-Qp-HfU"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Open…" keyEquivalent="o" id="4Cq-0g-LCI">
+                                            <connections>
+                                                <action selector="openDocument:" target="Ady-hI-5gd" id="xxC-nM-i6v"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Open Recent" id="ztD-VQ-Yq0">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <menu key="submenu" title="Open Recent" systemMenu="recentDocuments" id="Svl-gY-c70">
+                                                <items>
+                                                    <menuItem title="Clear Menu" id="ShP-Fl-9rj">
+                                                        <connections>
+                                                            <action selector="clearRecentDocuments:" target="Ady-hI-5gd" id="FXp-WI-gR8"/>
+                                                        </connections>
+                                                    </menuItem>
+                                                </items>
+                                            </menu>
+                                        </menuItem>
+                                        <menuItem isSeparatorItem="YES" id="N9b-hI-xiK"/>
+                                        <menuItem title="Close" keyEquivalent="w" id="rKD-Pk-hXM">
+                                            <connections>
+                                                <action selector="performClose:" target="Ady-hI-5gd" id="2EQ-Fu-xrv"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Save" keyEquivalent="s" id="Ffh-uU-GnQ">
+                                            <connections>
+                                                <action selector="saveDocument:" target="Ady-hI-5gd" id="bcz-Hq-tQY"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Save As…" keyEquivalent="S" id="hcy-BP-9tk">
+                                            <connections>
+                                                <action selector="saveDocumentAs:" target="Ady-hI-5gd" id="MWm-fQ-8dH"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Revert to Saved" id="OpS-YL-JzN">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="revertDocumentToSaved:" target="Ady-hI-5gd" id="T0g-tG-Nvu"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem isSeparatorItem="YES" id="aSi-eU-H9v"/>
+                                        <menuItem title="Page Setup…" keyEquivalent="P" id="x9y-pB-zD0">
+                                            <connections>
+                                                <action selector="runPageLayout:" target="Ady-hI-5gd" id="rQc-kr-357"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Print…" keyEquivalent="p" id="Vk6-EW-7Eb">
+                                            <connections>
+                                                <action selector="print:" target="Ady-hI-5gd" id="3RR-X7-zjE"/>
+                                            </connections>
+                                        </menuItem>
+                                    </items>
+                                </menu>
                             </menuItem>
                             <menuItem title="Window" id="aUF-d1-5bR">
                                 <modifierMask key="keyEquivalentModifierMask"/>
