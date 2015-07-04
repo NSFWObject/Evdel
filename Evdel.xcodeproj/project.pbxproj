@@ -794,7 +794,7 @@
 				);
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = EvdelKit/Info.plist;
-				INSTALL_PATH = "@executable_path/../Frameworks";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zats.EvdelKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -821,7 +821,7 @@
 				);
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = EvdelKit/Info.plist;
-				INSTALL_PATH = "@executable_path/../Frameworks";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zats.EvdelKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
