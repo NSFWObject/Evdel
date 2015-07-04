@@ -7,6 +7,8 @@
 //
 
 import AppKit
+import QuartzCore
+
 
 private enum FileMode: Int {
     case Left = 0
@@ -44,4 +46,27 @@ class WindowController: NSWindowController {
             controller.fileMode = [.None, .Insertion]
         }
     }
+}
+
+
+extension WindowController: NSOpenSavePanelDelegate {
+    @IBAction func openDocument(file: AnyObject) {
+        let open = NSOpenPanel()
+        open.allowsMultipleSelection = true
+        open.delegate = self
+//        open.title = "Please select a pair of files to diff"
+        open.beginWithCompletionHandler { (status) in
+            if status != NSFileHandlingPanelOKButton {
+                return
+            }
+            guard open.URLs.count == 2 else {
+                return
+            }
+            guard let controller = self.contentViewController as? DiffViewController else {
+                return
+            }
+            controller.openDiff(leftPath: open.URLs[0].relativePath!, rightPath: open.URLs[1].relativePath!)
+        }
+    }
+   
 }

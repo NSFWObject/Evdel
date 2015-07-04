@@ -7,7 +7,7 @@
 //
 
 import Cocoa
-
+import EvdelKit
 
 class DiffViewController: NSViewController {
     
@@ -16,7 +16,7 @@ class DiffViewController: NSViewController {
     @IBOutlet var textView: NSTextView!
     @IBOutlet weak var textScrollView: NSScrollView!
 
-    let diffService: DiffService = DiffService()
+    let diffService: Differ = Differ()
     
     var fileMode: [Diff.DiffType] = [.Insertion, .None, .Deletion] {
         didSet {
@@ -28,16 +28,20 @@ class DiffViewController: NSViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         if FileOpeningService.sharedInstance.deferredPaths != nil {
             diffPaths = FileOpeningService.sharedInstance.deferredPaths!
+            log("Opening files from the service")
         } else {
+            
             let arguments = NSProcessInfo.processInfo().arguments
-            if arguments.count < 5 {
+            if arguments.count < 3 {
                 return
             }
-            diffPaths = [arguments[3], arguments[4]]
+            log("Opening files from command line arguments: \(arguments)")
+            diffPaths = pathsFromArguments(arguments)
         }
+        log("Paths: \(diffPaths)")
         
         reloadDiff()
         
@@ -104,19 +108,47 @@ class DiffViewController: NSViewController {
         guard let left = string(path: leftPath), right = string(path: rightPath) else {
             return nil
         }
-        return diffService.diff(left: left, right: right, options: [DiffOptions.EndOfOneDiffIsBeginningOfAnother])
+        return diffService.diff(left: left, right: right)
+    }
+    
+    private func pathsFromArguments(arguments: [String]) -> [String]? {
+        if arguments.count < 3 {
+            return nil
+        }
+
+        if let left = reachablePathForPath(arguments[1], pwd: arguments[3]),
+               right = reachablePathForPath(arguments[2], pwd: arguments[3]) {
+            return [left, right]
+        }
+        return nil
+    }
+    
+    private func reachablePathForPath(path: String, pwd: String?) -> String? {
+        let manager = NSFileManager.defaultManager()
+        if manager.fileExistsAtPath(path) {
+            return path
+        }
+        guard let pwd = pwd else {
+            return nil
+        }
+        let result = pwd + path
+        if manager.fileExistsAtPath(result) {
+            return result
+        }
+        return nil
     }
     
     private func string(path path: String) -> String? {
         let manager = NSFileManager.defaultManager()
         var isDirectory: ObjCBool = false
         if !manager.fileExistsAtPath(path, isDirectory: &isDirectory) || isDirectory {
+            log("File does not exist at \(path)")
             return nil
         }
         do {
             return try String(contentsOfFile: path, encoding: NSUTF8StringEncoding)
         } catch (let e) {
-            print("Failed to read the string from \(path): \(e)")
+            log("Failed to read the string from \(path): \(e)")
             return nil
         }
     }

@@ -1,1 +1,5 @@
+github "Quick/Nimble" "463b70b9d4c0d4d9879fb35e24b2d2109b648eb8"
+github "Quick/Quick" "f251029a43c3f7765939cd25d64f1da13b487602"
+github "antitypical/Result" "0.5"
 github "zats/google-diff-match-patch" "5059ff1fdbc0f79dfdfc8f976e7e200d37470de1"
+github "ReactiveCocoa/ReactiveCocoa" "462da2a6f511c72ced8239276422bf65017105b0"

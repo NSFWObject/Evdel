@@ -59,7 +59,7 @@
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <menu key="submenu" title="File" id="8MT-J4-lpn">
                                     <items>
-                                        <menuItem title="New" keyEquivalent="n" id="vUb-lx-uHH">
+                                        <menuItem title="New" enabled="NO" keyEquivalent="n" id="vUb-lx-uHH">
                                             <connections>
                                                 <action selector="newDocument:" target="Ady-hI-5gd" id="WzT-Qp-HfU"/>
                                             </connections>
@@ -87,17 +87,17 @@
                                                 <action selector="performClose:" target="Ady-hI-5gd" id="2EQ-Fu-xrv"/>
                                             </connections>
                                         </menuItem>
-                                        <menuItem title="Save" keyEquivalent="s" id="Ffh-uU-GnQ">
+                                        <menuItem title="Save" enabled="NO" keyEquivalent="s" id="Ffh-uU-GnQ">
                                             <connections>
                                                 <action selector="saveDocument:" target="Ady-hI-5gd" id="bcz-Hq-tQY"/>
                                             </connections>
                                         </menuItem>
-                                        <menuItem title="Save As…" keyEquivalent="S" id="hcy-BP-9tk">
+                                        <menuItem title="Save As…" enabled="NO" keyEquivalent="S" id="hcy-BP-9tk">
                                             <connections>
                                                 <action selector="saveDocumentAs:" target="Ady-hI-5gd" id="MWm-fQ-8dH"/>
                                             </connections>
                                         </menuItem>
-                                        <menuItem title="Revert to Saved" id="OpS-YL-JzN">
+                                        <menuItem title="Revert to Saved" enabled="NO" id="OpS-YL-JzN">
                                             <modifierMask key="keyEquivalentModifierMask"/>
                                             <connections>
                                                 <action selector="revertDocumentToSaved:" target="Ady-hI-5gd" id="T0g-tG-Nvu"/>
@@ -208,7 +208,7 @@
                                         <rect key="frame" x="0.0" y="14" width="38" height="25"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <animations/>
-                                        <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="NSSidebarTemplate" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" enabled="NO" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="6TC-Fv-OIZ">
+                                        <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="NSSidebarTemplate" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="6TC-Fv-OIZ">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
@@ -225,7 +225,7 @@
                                         <segmentedCell key="cell" borderStyle="border" alignment="left" style="texturedSquare" trackingMode="selectOne" id="QNG-Ig-46a">
                                             <font key="font" metaFont="system"/>
                                             <segments>
-                                                <segment label="Regular" enabled="NO"/>
+                                                <segment label="Regular"/>
                                                 <segment label="Smart" selected="YES" tag="1"/>
                                             </segments>
                                         </segmentedCell>
@@ -233,11 +233,9 @@
                                 </toolbarItem>
                             </allowedToolbarItems>
                             <defaultToolbarItems>
-                                <toolbarItem reference="Mnm-vH-tFz"/>
                                 <toolbarItem reference="Jxp-jK-DXn"/>
                                 <toolbarItem reference="Xh5-tB-uBD"/>
                                 <toolbarItem reference="Jxp-jK-DXn"/>
-                                <toolbarItem reference="abv-Xo-YD5"/>
                             </defaultToolbarItems>
                         </toolbar>
                     </window>
@@ -293,7 +291,7 @@
                                     <animations/>
                                 </scroller>
                                 <scroller key="verticalScroller" wantsLayer="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="63R-lo-1Pb">
-                                    <rect key="frame" x="464" y="1" width="15" height="268"/>
+                                    <rect key="frame" x="463" y="1" width="16" height="268"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <animations/>
                                 </scroller>

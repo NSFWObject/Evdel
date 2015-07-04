@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 47;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,13 +13,28 @@
 		5C05E49A1B35F22900D97E13 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C05E4981B35F22900D97E13 /* Main.storyboard */; };
 		5C05E4A51B35F22900D97E13 /* EvdelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C05E4A41B35F22900D97E13 /* EvdelTests.swift */; };
 		5C05E4B01B35F22900D97E13 /* EvdelUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C05E4AF1B35F22900D97E13 /* EvdelUITests.swift */; };
-		5C18134F1B426B3800E60F68 /* Diffing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C18134E1B426B3800E60F68 /* Diffing.swift */; };
-		5C1813511B426BE500E60F68 /* DiffMatchPatch+Diffing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1813501B426BE500E60F68 /* DiffMatchPatch+Diffing.swift */; };
+		5C6DD8CF1B43811E0018ACFE /* LoggingUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6DD8CE1B43811E0018ACFE /* LoggingUtils.swift */; };
+		5CC02BF51B47981300A99D6B /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CC02BF41B47981300A99D6B /* Quick.framework */; };
+		5CC02BF61B47982900A99D6B /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CC02BF41B47981300A99D6B /* Quick.framework */; };
+		5CC02BF71B47982F00A99D6B /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5CC02BF41B47981300A99D6B /* Quick.framework */; };
 		5CC483781B37A35E00F989CF /* WindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC483771B37A35E00F989CF /* WindowController.swift */; };
 		5CCD8F4B1B3BDAE9001FFDB6 /* DiffMatchPatch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CCD8F491B3BDAE3001FFDB6 /* DiffMatchPatch.framework */; };
 		5CCD8F4C1B3BDAE9001FFDB6 /* DiffMatchPatch.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5CCD8F491B3BDAE3001FFDB6 /* DiffMatchPatch.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		5CDB834F1B42768C001F1D39 /* DefferedFileOpeningService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDB834E1B42768C001F1D39 /* DefferedFileOpeningService.swift */; };
-		5CE736661B373C0C004793F6 /* DiffService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE736651B373C0C004793F6 /* DiffService.swift */; };
+		5CCFD9AF1B4622F800FFC8D8 /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C005E211B4622D60022DB98 /* ReactiveCocoa.framework */; };
+		5CCFD9B01B4622F800FFC8D8 /* ReactiveCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5C005E211B4622D60022DB98 /* ReactiveCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5CCFD9BC1B4629EA00FFC8D8 /* EvdelKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 5CCFD9BB1B4629EA00FFC8D8 /* EvdelKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5CCFD9C31B4629EA00FFC8D8 /* EvdelKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CCFD9B91B4629EA00FFC8D8 /* EvdelKit.framework */; };
+		5CCFD9CE1B4629EA00FFC8D8 /* EvdelKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CCFD9B91B4629EA00FFC8D8 /* EvdelKit.framework */; };
+		5CCFD9CF1B4629EA00FFC8D8 /* EvdelKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5CCFD9B91B4629EA00FFC8D8 /* EvdelKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5CCFD9DA1B462A4100FFC8D8 /* Diffing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CCFD9D61B462A4100FFC8D8 /* Diffing.swift */; };
+		5CCFD9DB1B462A4100FFC8D8 /* DiffPlugins.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CCFD9D71B462A4100FFC8D8 /* DiffPlugins.swift */; };
+		5CCFD9DC1B462A4100FFC8D8 /* DiffPostprocessingPlugins.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CCFD9D81B462A4100FFC8D8 /* DiffPostprocessingPlugins.swift */; };
+		5CCFD9DD1B462A4100FFC8D8 /* Differ.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CCFD9D91B462A4100FFC8D8 /* Differ.swift */; };
+		5CCFD9DE1B462A7E00FFC8D8 /* DiffMatchPatch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CCD8F491B3BDAE3001FFDB6 /* DiffMatchPatch.framework */; };
+		5CCFD9E31B462BE200FFC8D8 /* DiffPostprocessingPluginsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CCFD9E21B462BE200FFC8D8 /* DiffPostprocessingPluginsTests.swift */; };
+		5CCFD9F61B464E5000FFC8D8 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CCFD9F11B464E4600FFC8D8 /* Result.framework */; };
+		5CCFD9F71B464E5000FFC8D8 /* Result.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5CCFD9F11B464E4600FFC8D8 /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5CDB834F1B42768C001F1D39 /* FileOpeningService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDB834E1B42768C001F1D39 /* FileOpeningService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +52,27 @@
 			remoteGlobalIDString = 5C05E48E1B35F22900D97E13;
 			remoteInfo = Evdel;
 		};
+		5CCFD9C41B4629EA00FFC8D8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5C05E4871B35F22900D97E13 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5CCFD9B81B4629EA00FFC8D8;
+			remoteInfo = EvdelKit;
+		};
+		5CCFD9C61B4629EA00FFC8D8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5C05E4871B35F22900D97E13 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5C05E48E1B35F22900D97E13;
+			remoteInfo = Evdel;
+		};
+		5CCFD9CC1B4629EA00FFC8D8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5C05E4871B35F22900D97E13 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5CCFD9B81B4629EA00FFC8D8;
+			remoteInfo = EvdelKit;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -47,13 +83,27 @@
 			dstSubfolderSpec = 10;
 			files = (
 				5CCD8F4C1B3BDAE9001FFDB6 /* DiffMatchPatch.framework in Embed Frameworks */,
+				5CCFD9CF1B4629EA00FFC8D8 /* EvdelKit.framework in Embed Frameworks */,
+				5CCFD9F71B464E5000FFC8D8 /* Result.framework in Embed Frameworks */,
+				5CCFD9B01B4622F800FFC8D8 /* ReactiveCocoa.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5CA5FB141B46619D003F32A8 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				5CC02BF71B47982F00A99D6B /* Quick.framework in CopyFiles */,
+			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		5C005E211B4622D60022DB98 /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveCocoa.framework; path = Carthage/Build/Mac/ReactiveCocoa.framework; sourceTree = "<group>"; };
 		5C05E48F1B35F22900D97E13 /* Evdel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Evdel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C05E4921B35F22900D97E13 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5C05E4941B35F22900D97E13 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -67,13 +117,23 @@
 		5C05E4AF1B35F22900D97E13 /* EvdelUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvdelUITests.swift; sourceTree = "<group>"; };
 		5C05E4B11B35F22900D97E13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5C05E4CA1B36055300D97E13 /* Evdel.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Evdel.playground; sourceTree = "<group>"; };
-		5C18134E1B426B3800E60F68 /* Diffing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Diffing.swift; sourceTree = "<group>"; };
-		5C1813501B426BE500E60F68 /* DiffMatchPatch+Diffing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DiffMatchPatch+Diffing.swift"; sourceTree = "<group>"; };
+		5C6DD8CE1B43811E0018ACFE /* LoggingUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggingUtils.swift; sourceTree = "<group>"; };
+		5CC02BF41B47981300A99D6B /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/Mac/Quick.framework; sourceTree = "<group>"; };
 		5CC483771B37A35E00F989CF /* WindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindowController.swift; sourceTree = "<group>"; };
 		5CCD8F491B3BDAE3001FFDB6 /* DiffMatchPatch.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DiffMatchPatch.framework; path = Carthage/Build/Mac/DiffMatchPatch.framework; sourceTree = "<group>"; };
-		5CDB834E1B42768C001F1D39 /* DefferedFileOpeningService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefferedFileOpeningService.swift; sourceTree = "<group>"; };
+		5CCFD9B91B4629EA00FFC8D8 /* EvdelKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EvdelKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5CCFD9BB1B4629EA00FFC8D8 /* EvdelKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EvdelKit.h; sourceTree = "<group>"; };
+		5CCFD9BD1B4629EA00FFC8D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5CCFD9C21B4629EA00FFC8D8 /* EvdelKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EvdelKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5CCFD9CB1B4629EA00FFC8D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5CCFD9D61B462A4100FFC8D8 /* Diffing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Diffing.swift; sourceTree = "<group>"; };
+		5CCFD9D71B462A4100FFC8D8 /* DiffPlugins.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiffPlugins.swift; sourceTree = "<group>"; };
+		5CCFD9D81B462A4100FFC8D8 /* DiffPostprocessingPlugins.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiffPostprocessingPlugins.swift; sourceTree = "<group>"; };
+		5CCFD9D91B462A4100FFC8D8 /* Differ.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Differ.swift; sourceTree = "<group>"; };
+		5CCFD9E21B462BE200FFC8D8 /* DiffPostprocessingPluginsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiffPostprocessingPluginsTests.swift; sourceTree = "<group>"; };
+		5CCFD9F11B464E4600FFC8D8 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/Mac/Result.framework; sourceTree = "<group>"; };
+		5CDB834E1B42768C001F1D39 /* FileOpeningService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileOpeningService.swift; sourceTree = "<group>"; };
 		5CDB83501B4279BA001F1D39 /* Evdel.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Evdel.entitlements; sourceTree = "<group>"; };
-		5CE736651B373C0C004793F6 /* DiffService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiffService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +142,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				5CCD8F4B1B3BDAE9001FFDB6 /* DiffMatchPatch.framework in Frameworks */,
+				5CCFD9CE1B4629EA00FFC8D8 /* EvdelKit.framework in Frameworks */,
+				5CCFD9F61B464E5000FFC8D8 /* Result.framework in Frameworks */,
+				5CC02BF51B47981300A99D6B /* Quick.framework in Frameworks */,
+				5CCFD9AF1B4622F800FFC8D8 /* ReactiveCocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,6 +163,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5CCFD9B51B4629EA00FFC8D8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5CCFD9DE1B462A7E00FFC8D8 /* DiffMatchPatch.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5CCFD9BF1B4629EA00FFC8D8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5CC02BF61B47982900A99D6B /* Quick.framework in Frameworks */,
+				5CCFD9C31B4629EA00FFC8D8 /* EvdelKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -107,9 +188,10 @@
 			children = (
 				5C05E4CA1B36055300D97E13 /* Evdel.playground */,
 				5C05E4911B35F22900D97E13 /* Evdel */,
-				5C05E4BD1B35F5CD00D97E13 /* Frameworks */,
 				5C05E4A31B35F22900D97E13 /* EvdelTests */,
 				5C05E4AE1B35F22900D97E13 /* EvdelUITests */,
+				5CCFD9BA1B4629EA00FFC8D8 /* EvdelKit */,
+				5C05E4BD1B35F5CD00D97E13 /* Frameworks */,
 				5C05E4901B35F22900D97E13 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -120,6 +202,8 @@
 				5C05E48F1B35F22900D97E13 /* Evdel.app */,
 				5C05E4A01B35F22900D97E13 /* EvdelTests.xctest */,
 				5C05E4AB1B35F22900D97E13 /* EvdelUITests.xctest */,
+				5CCFD9B91B4629EA00FFC8D8 /* EvdelKit.framework */,
+				5CCFD9C21B4629EA00FFC8D8 /* EvdelKitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -127,6 +211,7 @@
 		5C05E4911B35F22900D97E13 /* Evdel */ = {
 			isa = PBXGroup;
 			children = (
+				5C6DD8CD1B4381120018ACFE /* Utils */,
 				5CDB83501B4279BA001F1D39 /* Evdel.entitlements */,
 				5C05E4921B35F22900D97E13 /* AppDelegate.swift */,
 				5CC483771B37A35E00F989CF /* WindowController.swift */,
@@ -159,6 +244,9 @@
 		5C05E4BD1B35F5CD00D97E13 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5CC02BF41B47981300A99D6B /* Quick.framework */,
+				5CCFD9F11B464E4600FFC8D8 /* Result.framework */,
+				5C005E211B4622D60022DB98 /* ReactiveCocoa.framework */,
 				5CCD8F491B3BDAE3001FFDB6 /* DiffMatchPatch.framework */,
 			);
 			name = Frameworks;
@@ -167,11 +255,47 @@
 		5C18134D1B426B2D00E60F68 /* Diffing */ = {
 			isa = PBXGroup;
 			children = (
-				5CE736651B373C0C004793F6 /* DiffService.swift */,
-				5C1813501B426BE500E60F68 /* DiffMatchPatch+Diffing.swift */,
-				5C18134E1B426B3800E60F68 /* Diffing.swift */,
 			);
 			name = Diffing;
+			sourceTree = "<group>";
+		};
+		5C6DD8CD1B4381120018ACFE /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				5C6DD8CE1B43811E0018ACFE /* LoggingUtils.swift */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		5CCFD9BA1B4629EA00FFC8D8 /* EvdelKit */ = {
+			isa = PBXGroup;
+			children = (
+				5CCFD9D61B462A4100FFC8D8 /* Diffing.swift */,
+				5CCFD9D71B462A4100FFC8D8 /* DiffPlugins.swift */,
+				5CCFD9D81B462A4100FFC8D8 /* DiffPostprocessingPlugins.swift */,
+				5CCFD9D91B462A4100FFC8D8 /* Differ.swift */,
+				5CCFD9C81B4629EA00FFC8D8 /* EvdelKitTests */,
+				5CCFD9DF1B462B7600FFC8D8 /* Support Files */,
+			);
+			path = EvdelKit;
+			sourceTree = "<group>";
+		};
+		5CCFD9C81B4629EA00FFC8D8 /* EvdelKitTests */ = {
+			isa = PBXGroup;
+			children = (
+				5CCFD9E21B462BE200FFC8D8 /* DiffPostprocessingPluginsTests.swift */,
+				5CCFD9CB1B4629EA00FFC8D8 /* Info.plist */,
+			);
+			path = EvdelKitTests;
+			sourceTree = SOURCE_ROOT;
+		};
+		5CCFD9DF1B462B7600FFC8D8 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				5CCFD9BB1B4629EA00FFC8D8 /* EvdelKit.h */,
+				5CCFD9BD1B4629EA00FFC8D8 /* Info.plist */,
+			);
+			name = "Support Files";
 			sourceTree = "<group>";
 		};
 		5CDB834C1B427580001F1D39 /* Resources */ = {
@@ -187,12 +311,23 @@
 		5CDB834D1B42766F001F1D39 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				5CDB834E1B42768C001F1D39 /* DefferedFileOpeningService.swift */,
+				5CDB834E1B42768C001F1D39 /* FileOpeningService.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		5CCFD9B61B4629EA00FFC8D8 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5CCFD9BC1B4629EA00FFC8D8 /* EvdelKit.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		5C05E48E1B35F22900D97E13 /* Evdel */ = {
@@ -207,6 +342,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				5CCFD9CD1B4629EA00FFC8D8 /* PBXTargetDependency */,
 			);
 			name = Evdel;
 			productName = Evdel;
@@ -249,12 +385,51 @@
 			productReference = 5C05E4AB1B35F22900D97E13 /* EvdelUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		5CCFD9B81B4629EA00FFC8D8 /* EvdelKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5CCFD9D01B4629EA00FFC8D8 /* Build configuration list for PBXNativeTarget "EvdelKit" */;
+			buildPhases = (
+				5CCFD9B41B4629EA00FFC8D8 /* Sources */,
+				5CCFD9B51B4629EA00FFC8D8 /* Frameworks */,
+				5CCFD9B61B4629EA00FFC8D8 /* Headers */,
+				5CCFD9B71B4629EA00FFC8D8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EvdelKit;
+			productName = EvdelKit;
+			productReference = 5CCFD9B91B4629EA00FFC8D8 /* EvdelKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		5CCFD9C11B4629EA00FFC8D8 /* EvdelKitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5CCFD9D31B4629EA00FFC8D8 /* Build configuration list for PBXNativeTarget "EvdelKitTests" */;
+			buildPhases = (
+				5CCFD9BE1B4629EA00FFC8D8 /* Sources */,
+				5CCFD9BF1B4629EA00FFC8D8 /* Frameworks */,
+				5CCFD9C01B4629EA00FFC8D8 /* Resources */,
+				5CA5FB141B46619D003F32A8 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5CCFD9C51B4629EA00FFC8D8 /* PBXTargetDependency */,
+				5CCFD9C71B4629EA00FFC8D8 /* PBXTargetDependency */,
+			);
+			name = EvdelKitTests;
+			productName = EvdelKitTests;
+			productReference = 5CCFD9C21B4629EA00FFC8D8 /* EvdelKitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		5C05E4871B35F22900D97E13 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Sash Zats";
 				TargetAttributes = {
@@ -275,10 +450,18 @@
 						CreatedOnToolsVersion = 7.0;
 						TestTargetID = 5C05E48E1B35F22900D97E13;
 					};
+					5CCFD9B81B4629EA00FFC8D8 = {
+						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = 5KE88HWMKJ;
+					};
+					5CCFD9C11B4629EA00FFC8D8 = {
+						CreatedOnToolsVersion = 7.0;
+						TestTargetID = 5C05E48E1B35F22900D97E13;
+					};
 				};
 			};
 			buildConfigurationList = 5C05E48A1B35F22900D97E13 /* Build configuration list for PBXProject "Evdel" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 6.3";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -293,6 +476,8 @@
 				5C05E48E1B35F22900D97E13 /* Evdel */,
 				5C05E49F1B35F22900D97E13 /* EvdelTests */,
 				5C05E4AA1B35F22900D97E13 /* EvdelUITests */,
+				5CCFD9B81B4629EA00FFC8D8 /* EvdelKit */,
+				5CCFD9C11B4629EA00FFC8D8 /* EvdelKitTests */,
 			);
 		};
 /* End PBXProject section */
@@ -321,6 +506,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5CCFD9B71B4629EA00FFC8D8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5CCFD9C01B4629EA00FFC8D8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -328,13 +527,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5C1813511B426BE500E60F68 /* DiffMatchPatch+Diffing.swift in Sources */,
-				5C18134F1B426B3800E60F68 /* Diffing.swift in Sources */,
 				5C05E4951B35F22900D97E13 /* ViewController.swift in Sources */,
 				5CC483781B37A35E00F989CF /* WindowController.swift in Sources */,
 				5C05E4931B35F22900D97E13 /* AppDelegate.swift in Sources */,
-				5CDB834F1B42768C001F1D39 /* DefferedFileOpeningService.swift in Sources */,
-				5CE736661B373C0C004793F6 /* DiffService.swift in Sources */,
+				5C6DD8CF1B43811E0018ACFE /* LoggingUtils.swift in Sources */,
+				5CDB834F1B42768C001F1D39 /* FileOpeningService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -354,6 +551,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5CCFD9B41B4629EA00FFC8D8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5CCFD9DA1B462A4100FFC8D8 /* Diffing.swift in Sources */,
+				5CCFD9DB1B462A4100FFC8D8 /* DiffPlugins.swift in Sources */,
+				5CCFD9DD1B462A4100FFC8D8 /* Differ.swift in Sources */,
+				5CCFD9DC1B462A4100FFC8D8 /* DiffPostprocessingPlugins.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5CCFD9BE1B4629EA00FFC8D8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5CCFD9E31B462BE200FFC8D8 /* DiffPostprocessingPluginsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -366,6 +582,21 @@
 			isa = PBXTargetDependency;
 			target = 5C05E48E1B35F22900D97E13 /* Evdel */;
 			targetProxy = 5C05E4AC1B35F22900D97E13 /* PBXContainerItemProxy */;
+		};
+		5CCFD9C51B4629EA00FFC8D8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5CCFD9B81B4629EA00FFC8D8 /* EvdelKit */;
+			targetProxy = 5CCFD9C41B4629EA00FFC8D8 /* PBXContainerItemProxy */;
+		};
+		5CCFD9C71B4629EA00FFC8D8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5C05E48E1B35F22900D97E13 /* Evdel */;
+			targetProxy = 5CCFD9C61B4629EA00FFC8D8 /* PBXContainerItemProxy */;
+		};
+		5CCFD9CD1B4629EA00FFC8D8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5CCFD9B81B4629EA00FFC8D8 /* EvdelKit */;
+			targetProxy = 5CCFD9CC1B4629EA00FFC8D8 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -466,13 +697,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Evdel/Evdel.entitlements;
-				CODE_SIGN_IDENTITY = "Developer ID Application";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = "${SRCROOT}/Carthage/Build/Mac";
 				INFOPLIST_FILE = Evdel/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zats.Evdel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "89705c19-9c6c-47e0-a4fe-78938aa110e1";
@@ -484,13 +714,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Evdel/Evdel.entitlements;
-				CODE_SIGN_IDENTITY = "Developer ID Application";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = "${SRCROOT}/Carthage/Build/Mac";
 				INFOPLIST_FILE = Evdel/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zats.Evdel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "89705c19-9c6c-47e0-a4fe-78938aa110e1";
@@ -549,6 +778,83 @@
 			};
 			name = Release;
 		};
+		5CCFD9D11B4629EA00FFC8D8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"${SRCROOT}/Carthage/Build/Mac",
+				);
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = EvdelKit/Info.plist;
+				INSTALL_PATH = "@executable_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zats.EvdelKit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		5CCFD9D21B4629EA00FFC8D8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"${SRCROOT}/Carthage/Build/Mac",
+				);
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = EvdelKit/Info.plist;
+				INSTALL_PATH = "@executable_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zats.EvdelKit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		5CCFD9D41B4629EA00FFC8D8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = EvdelKitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zats.EvdelKitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Evdel.app/Contents/MacOS/Evdel";
+			};
+			name = Debug;
+		};
+		5CCFD9D51B4629EA00FFC8D8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = EvdelKitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zats.EvdelKitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Evdel.app/Contents/MacOS/Evdel";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -584,6 +890,24 @@
 			buildConfigurations = (
 				5C05E4BB1B35F22900D97E13 /* Debug */,
 				5C05E4BC1B35F22900D97E13 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5CCFD9D01B4629EA00FFC8D8 /* Build configuration list for PBXNativeTarget "EvdelKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5CCFD9D11B4629EA00FFC8D8 /* Debug */,
+				5CCFD9D21B4629EA00FFC8D8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5CCFD9D31B4629EA00FFC8D8 /* Build configuration list for PBXNativeTarget "EvdelKitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5CCFD9D41B4629EA00FFC8D8 /* Debug */,
+				5CCFD9D51B4629EA00FFC8D8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
