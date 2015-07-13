@@ -13,14 +13,14 @@ import Nimble
 
 class CombineDeletionInsertionPluginSpec: QuickSpec {
     override func spec() {
+        var plugin: CombineDeletionInsertionPlugin!
         describe("Combine Oposite Diff Types plugin") {
-            var plugin: CombineDeletionInsertionPlugin!
             beforeEach {
                 plugin = CombineDeletionInsertionPlugin()
             }
             
             describe("Deletion Insertion") {
-                describe("fully matching diffs replaced with 1 no-op diff") {
+                it("fully matching diffs replaced with 1 no-op diff") {
                     /**
                       xxx
                     - aaa
@@ -34,7 +34,6 @@ class CombineDeletionInsertionPluginSpec: QuickSpec {
                         Diff(type: .None, text: "yyy"),
                     ]
                     let resultDiffs = plugin.process(diffs)
-                    expect(resultDiffs.count) == 3
                     expect(resultDiffs) == [
                         Diff(type: .None, text: "xxx"),
                         Diff(type: .None, text: "aaa"),
@@ -42,7 +41,31 @@ class CombineDeletionInsertionPluginSpec: QuickSpec {
                     ]
                 }
                 
-                describe("partially matching diffs turn into 3 diffs") {
+                it("should match the longest sequence") {
+                    /**
+                      xxx
+                    - xxbbaaa
+                    + bbaaayy
+                      yyy
+                     */
+                    let diffs = [
+                        Diff(type: .None, text: "xxx"),
+                        Diff(type: .Deletion, text: "xxbbaaa"),
+                        Diff(type: .Insertion, text: "bbaaayy"),
+                        Diff(type: .None, text: "yyy"),
+                    ]
+                    let resultDiffs = plugin.process(diffs)
+                    expect(resultDiffs) == [
+                        Diff(type: .None, text: "xxx"),
+                        Diff(type: .Deletion, text: "xx"),
+                        Diff(type: .None, text: "bbaaa"),
+                        Diff(type: .Insertion, text: "yy"),
+                        Diff(type: .None, text: "yyy"),
+                    ]
+                    
+                }
+                
+                it("partially matching diffs turn into 3 diffs") {
                     /**
                       xxx
                     - bbaaa
@@ -56,7 +79,6 @@ class CombineDeletionInsertionPluginSpec: QuickSpec {
                         Diff(type: .None, text: "yyy"),
                     ]
                     let resultDiffs = plugin.process(diffs)
-                    expect(resultDiffs.count) == 5
                     expect(resultDiffs) == [
                         Diff(type: .None, text: "xxx"),
                         Diff(type: .Deletion, text: "bb"),
@@ -66,7 +88,7 @@ class CombineDeletionInsertionPluginSpec: QuickSpec {
                     ]
                 }
 
-                describe("partially matching assymetrical diffs turn into 2 diffs") {
+                it("partially matching assymetrical diffs turn into 2 diffs") {
                     /**
                       xxx
                     - bbaaa
@@ -80,7 +102,6 @@ class CombineDeletionInsertionPluginSpec: QuickSpec {
                         Diff(type: .None, text: "yyy"),
                     ]
                     let resultDiffs = plugin.process(diffs)
-                    expect(resultDiffs.count) == 4
                     expect(resultDiffs) == [
                         Diff(type: .None, text: "xxx"),
                         Diff(type: .Deletion, text: "bb"),
@@ -89,7 +110,7 @@ class CombineDeletionInsertionPluginSpec: QuickSpec {
                     ]
                 }
                 
-                describe("not matching assymetrical diffs stay unchanged") {
+                it("not matching assymetrical diffs stay unchanged") {
                     /**
                       xxx
                     - bbaaa
@@ -103,7 +124,6 @@ class CombineDeletionInsertionPluginSpec: QuickSpec {
                         Diff(type: .None, text: "yyy"),
                     ]
                     let resultDiffs = plugin.process(diffs)
-                    expect(resultDiffs.count) == 4
                     expect(resultDiffs) == [
                         Diff(type: .None, text: "xxx"),
                         Diff(type: .Deletion, text: "bbb"),
@@ -113,8 +133,8 @@ class CombineDeletionInsertionPluginSpec: QuickSpec {
                 }
             }
             
-            describe("Insertion Deletion") {
-                describe("fully matched diffes implode") {
+            context("Insertion Deletion") {
+                it("fully matched diffs implode") {
                     /**
                         xxx
                       + aaa
@@ -123,18 +143,39 @@ class CombineDeletionInsertionPluginSpec: QuickSpec {
                      */
                     let diffs = [
                         Diff(type: .None, text: "xxx"),
-                        Diff(type: .Deletion, text: "aaa"),
                         Diff(type: .Insertion, text: "aaa"),
+                        Diff(type: .Deletion, text: "aaa"),
                         Diff(type: .None, text: "yyy"),
                     ]
                     let resultDiffs = plugin.process(diffs)
-                    expect(resultDiffs.count) == 2
                     expect(resultDiffs) == [
                         Diff(type: .None, text: "xxx"),
                         Diff(type: .None, text: "yyy"),
                     ]
                 }
                 
+                it("partially matching diffs reduced to unequal parts") {
+                    /**
+                        xxx
+                      + xxaaa
+                      - aaayy
+                        yyy
+                     */
+                    let diffs = [
+                        Diff(type: .None, text: "xxx"),
+                        Diff(type: .Insertion, text: "xxaaa"),
+                        Diff(type: .Deletion, text: "aaayy"),
+                        Diff(type: .None, text: "yyy"),
+                    ]
+                    let resultDiffs = plugin.process(diffs)
+                    expect(resultDiffs) == [
+                        Diff(type: .None, text: "xxx"),
+                        Diff(type: .Insertion, text: "xx"),
+                        Diff(type: .Deletion, text: "yy"),
+                        Diff(type: .None, text: "yyy"),
+                    ]
+                    
+                }
             }
         }
     }
