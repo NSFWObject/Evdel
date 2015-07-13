@@ -68,6 +68,20 @@ public protocol Diffable {
 }
 
 
+ extension Diff: CustomDebugStringConvertible {
+    public var debugDescription: String {
+        switch type {
+        case .Insertion:
+            return "+\(text)"
+        case .Deletion:
+            return "-\(text)"
+        case .None:
+            return "=\(text)"
+        }
+    }
+}
+
+
 // Compatibility with Cocoa
 public class DiffObject: NSObject {
     public let diff: Diff
