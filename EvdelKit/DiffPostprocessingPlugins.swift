@@ -40,7 +40,13 @@ public struct CombineDeletionInsertionPlugin: DiffPostprocessingPlugin {
             let diff2 = result[index+1]
             switch (diff1.type, diff2.type) {
             case (.Insertion, .Deletion):
-                fallthrough
+                if let length = commonLength(string1: diff1.text, string2: diff2.text) {
+                    let newDiffs = adjustDiffs(diff1: diff1, diff2: diff2, commonSubstringLength: length)
+                    result.removeRange(Range(start: index, end: index + 2))
+                    result += newDiffs
+                    result.append(diffs[index+2])
+                    index++
+                }
             case (.Deletion, .Insertion):
                 if let length = commonLength(string1: diff1.text, string2: diff2.text) {
                     let newDiffs = adjustDiffs(diff1: diff1, diff2: diff2, commonSubstringLength: length)
@@ -68,18 +74,18 @@ public struct CombineDeletionInsertionPlugin: DiffPostprocessingPlugin {
             return nil
         }
         var commonLength: Int?
-        var index1 = str1.endIndex
-        var index2 = str2.startIndex
-        for i in 1...total {
-            index1 = index1.predecessor()
-            index2 = index2.successor()
+        for i in stride(from: total, through: 1, by: -1) {
+            let index1 = advance(str1.endIndex, -i)
+            let index2 = advance(str2.startIndex, i)
             let substr1 = str1.substringFromIndex(index1)
             let substr2 = str2.substringToIndex(index2)
             if substr1 == substr2 {
                 if let length = commonLength where length < i {
                     commonLength = i
+                    break
                 } else if commonLength == nil {
                     commonLength = i
+                    break
                 }
             }
         }
@@ -97,9 +103,16 @@ public struct CombineDeletionInsertionPlugin: DiffPostprocessingPlugin {
             result.append(Diff(type: diff1.type, text: str1))
         }
         
-        let newStr = text1.substringFromIndex(index1)
-        if !newStr.isEmpty {
-            result.append(Diff(type: .None, text: newStr))
+        switch (diff1.type, diff2.type) {
+        case (.Deletion, .Insertion):
+            let newStr = text1.substringFromIndex(index1)
+            if !newStr.isEmpty {
+                result.append(Diff(type: .None, text: newStr))
+            }
+        case (.Insertion, .Deletion):
+            break
+        default:
+            fatalError("Didn't expect to be here")
         }
         
         let text2 = diff2.text
