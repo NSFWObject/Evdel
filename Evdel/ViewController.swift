@@ -70,9 +70,13 @@ class DiffViewController: NSViewController {
     
     // MARK: - Private    
     private func setupTextView() {
+        textScrollView.contentInsets = NSEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
+        textView.textContainer!.widthTracksTextView = true
+        textView.textContainer!.containerSize = NSSize(width: 320.0, height:Double(FLT_MAX))
+
         let textContainer = NSTextContainer()
         textView.replaceTextContainer(textContainer)
-        textContainer.replaceLayoutManager(DiffLayoutManager())
+        textContainer.replaceLayoutManager(DiffLayoutManager())        
     }
     
     private func reloadDiff() {
@@ -89,9 +93,12 @@ class DiffViewController: NSViewController {
             }
         }
 
+        let paragraph = NSMutableParagraphStyle()
+        paragraph.lineBreakMode = NSLineBreakMode.ByWordWrapping
         let globalAttributes = [
             NSFontAttributeName: textView.font!,
-            NSForegroundColorAttributeName: NSColor.grayColor()
+            NSForegroundColorAttributeName: NSColor.grayColor(),
+            NSParagraphStyleAttributeName: paragraph
         ]
         let range = NSRange(location:0, length: attributedString.length)
         attributedString.addAttributes(globalAttributes, range: range)

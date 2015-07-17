@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="8121.20" systemVersion="15A204h" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="8152.3" systemVersion="15A216g" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="8121.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="8152.3"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -175,6 +175,7 @@
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="196" y="240" width="480" height="270"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
+                        <value key="minSize" type="size" width="320" height="270"/>
                         <toolbar key="toolbar" implicitIdentifier="BD368558-F756-4248-A513-941A53AF013A" autosavesConfiguration="NO" allowsUserCustomization="NO" displayMode="iconOnly" sizeMode="regular" id="OwE-Bo-vSg">
                             <allowedToolbarItems>
                                 <toolbarItem implicitItemIdentifier="NSToolbarSpaceItem" id="yxe-VJ-OYS"/>
@@ -250,14 +251,14 @@
         <!--Diff View Controller-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
-                <viewController identifier="DiffViewController" id="XfG-lQ-9wD" customClass="DiffViewController" customModule="Evdel" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="XfG-lQ-9wD" customClass="DiffViewController" customModule="Evdel" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="m2S-Jp-Qdl">
                         <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IjH-Pl-jke">
                                 <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
-                                <clipView key="contentView" id="Ana-fN-z3s">
+                                <clipView key="contentView" copiesOnScroll="NO" id="Ana-fN-z3s">
                                     <rect key="frame" x="1" y="1" width="478" height="268"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
@@ -267,7 +268,7 @@
                                             <animations/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <size key="minSize" width="478" height="268"/>
-                                            <size key="maxSize" width="485" height="10000000"/>
+                                            <size key="maxSize" width="10000000" height="10000000"/>
                                             <attributedString key="textStorage">
                                                 <fragment content=" ">
                                                     <attributes>
@@ -278,7 +279,7 @@
                                             </attributedString>
                                             <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                             <size key="minSize" width="478" height="268"/>
-                                            <size key="maxSize" width="485" height="10000000"/>
+                                            <size key="maxSize" width="10000000" height="10000000"/>
                                         </textView>
                                     </subviews>
                                     <animations/>
@@ -298,10 +299,10 @@
                             </scrollView>
                         </subviews>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="IjH-Pl-jke" secondAttribute="trailing" id="FnI-pj-j6P"/>
-                            <constraint firstItem="IjH-Pl-jke" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="WRS-Ze-QZZ"/>
-                            <constraint firstItem="IjH-Pl-jke" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="d7q-hR-xuz"/>
-                            <constraint firstAttribute="bottom" secondItem="IjH-Pl-jke" secondAttribute="bottom" id="dFa-FH-v2z"/>
+                            <constraint firstAttribute="bottom" secondItem="IjH-Pl-jke" secondAttribute="bottom" id="6dc-Sz-eG3"/>
+                            <constraint firstItem="IjH-Pl-jke" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="JsZ-E9-iob"/>
+                            <constraint firstItem="IjH-Pl-jke" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="hEd-Tp-7cj"/>
+                            <constraint firstAttribute="trailing" secondItem="IjH-Pl-jke" secondAttribute="trailing" id="mbI-YD-PdA"/>
                         </constraints>
                         <animations/>
                     </view>

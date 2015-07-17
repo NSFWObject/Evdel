@@ -20,8 +20,6 @@ class DiffLayoutManager: NSLayoutManager {
             return
         }
         
-        super.drawGlyphsForGlyphRange(glyphsToShow, atPoint: origin)
-
         textStorage.enumerateAttribute(DiffTypeAttributeName, inRange: glyphsToShow, options: NSAttributedStringEnumerationOptions.LongestEffectiveRangeNotRequired) { attribute, range, stop in
             guard let diffTypeString = attribute as? String, diffType = Diff.DiffType(rawValue: diffTypeString) else {
                 return
@@ -43,9 +41,9 @@ class DiffLayoutManager: NSLayoutManager {
             backgroundColor.setFill()
             let boundingRect = self.boundingRectForGlyphRange(range, inTextContainer: textContainer)
             NSRectFill(boundingRect)
-            super.drawGlyphsForGlyphRange(range, atPoint: origin)
             NSGraphicsContext.restoreGraphicsState()
         }
+        super.drawGlyphsForGlyphRange(glyphsToShow, atPoint: origin)
     }
 }
 
