@@ -10,6 +10,9 @@ import AppKit
 import EvdelKit
 
 
+let DiffTypeAttributeName = "DiffTypeAttributeName"
+
+
 class DiffLayoutManager: NSLayoutManager {
 
     override func drawGlyphsForGlyphRange(glyphsToShow: NSRange, atPoint origin: NSPoint) {
