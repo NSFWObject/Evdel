@@ -28,6 +28,8 @@ class DiffViewController: NSViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setupTextView()
 
         if FileOpeningService.sharedInstance.deferredPaths != nil {
             diffPaths = FileOpeningService.sharedInstance.deferredPaths!
@@ -67,6 +69,11 @@ class DiffViewController: NSViewController {
     }
     
     // MARK: - Private    
+    private func setupTextView() {
+        let textContainer = NSTextContainer()
+        textView.replaceTextContainer(textContainer)
+        textContainer.replaceLayoutManager(DiffLayoutManager())
+    }
     
     private func reloadDiff() {
         if let diffPaths = diffPaths where diffPaths.count == 2 {
@@ -92,15 +99,7 @@ class DiffViewController: NSViewController {
     }
     
     private func attributedStringForDiff(diff: Diff) -> NSAttributedString {
-        var attributes: [String: AnyObject] = [DiffAttachmentAttributeName: DiffObject(diff: diff)]
-        switch diff.type {
-        case .Insertion:
-            attributes[NSBackgroundColorAttributeName] = NSColor(calibratedRed:0.86, green:0.959, blue:0.807, alpha:1)
-        case .Deletion:
-            attributes[NSBackgroundColorAttributeName] = NSColor(calibratedRed:0.999, green:0.878, blue:0.856, alpha:1)
-        default:
-            break
-        }
+        let attributes: [String: AnyObject] = [DiffTypeAttributeName: diff.type.rawValue]
         return NSAttributedString(string: diff.text, attributes: attributes)
     }
     

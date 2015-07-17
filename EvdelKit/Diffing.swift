@@ -15,9 +15,9 @@ import Foundation
  */
 public struct Diff {
     /**
-        Implementation agnostic change types
+        Change types
      */
-    public enum DiffType {
+    public enum DiffType: String {
         case Deletion, Insertion, None
     }
     
