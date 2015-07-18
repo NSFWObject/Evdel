@@ -24,51 +24,49 @@ class DiffViewController: NSViewController {
         }
     }
     
-    var diffPaths: [String]?
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupTextView()
-
-        if FileOpeningService.sharedInstance.deferredPaths != nil {
-            diffPaths = FileOpeningService.sharedInstance.deferredPaths!
-            log("Opening files from the service")
-        } else {
-            
-            let arguments = NSProcessInfo.processInfo().arguments
-            if arguments.count < 3 {
-                return
-            }
-            log("Opening files from command line arguments: \(arguments)")
-            diffPaths = pathsFromArguments(arguments)
-        }
-        log("Paths: \(diffPaths)")
-        
+        setupNotificationHandler()
         reloadDiff()
-        
-        //setup notifications
-        FileOpeningService.sharedInstance.openHandler = openFileHandler
     }
     
     // MARK: - Public 
     
-    func openDiff(leftPath leftPath: String, rightPath: String) {
+    func openDiff(leftPath leftPath: NSURL, rightPath: NSURL) {
         if let diffs = diffsForFilePair(leftPath: leftPath, rightPath: rightPath) {
             displayDiffs(diffs, allowedOperations: fileMode)
         }
     }
     
     
-    // MARK: - Handlers
-
-    func openFileHandler(service: FileOpeningService) {
-        if let paths = service.deferredPaths where paths.count == 2 {
-            openDiff(leftPath: paths[0], rightPath: paths[1])
+    // MARK: - Private
+    
+    func setupNotificationHandler() {
+        // File did open
+        NSNotificationCenter.defaultCenter().addObserverForName(FileOpeningManagerShouldOpenFilesNotification, object: nil, queue: nil) { [unowned self] note in
+            if let userInfo = note.userInfo, left = userInfo[FileOpeningManagerLeftFileKey] as? NSURL, right = userInfo[FileOpeningManagerRightFileKey] as? NSURL {
+                self.openDiff(leftPath: left, rightPath: right)
+            }
+        }
+        
+        // View mode did change
+        NSNotificationCenter.defaultCenter().addObserverForName(ViewModeManagerDidChangeModeNotification, object: nil, queue: nil) { [unowned self] _ in
+            switch ViewModeManager.sharedManager.mode {
+            case .Left:
+                self.fileMode = [.Deletion, .None]
+            case .Both:
+                self.fileMode = [.Deletion, .None, .Insertion]
+            case .Right:
+                self.fileMode = [.Insertion, .None]
+            }
         }
     }
+
+    // MARK: - Private
     
-    // MARK: - Private    
     private func setupTextView() {
         textScrollView.contentInsets = NSEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
         textView.textContainer!.widthTracksTextView = true
@@ -80,8 +78,9 @@ class DiffViewController: NSViewController {
     }
     
     private func reloadDiff() {
-        if let diffPaths = diffPaths where diffPaths.count == 2 {
-            openDiff(leftPath: diffPaths[0], rightPath: diffPaths[1])
+        
+        if let left = FileOpeningManager.sharedInstance.leftFile, right = FileOpeningManager.sharedInstance.rightFile {
+            openDiff(leftPath: left, rightPath: right)
         }
     }
     
@@ -110,7 +109,7 @@ class DiffViewController: NSViewController {
         return NSAttributedString(string: diff.text, attributes: attributes)
     }
     
-    private func diffsForFilePair(leftPath leftPath: String, rightPath: String) -> [Diff]? {
+    private func diffsForFilePair(leftPath leftPath: NSURL, rightPath: NSURL) -> [Diff]? {
         guard let left = string(path: leftPath), right = string(path: rightPath) else {
             return nil
         }
@@ -144,17 +143,16 @@ class DiffViewController: NSViewController {
         return nil
     }
     
-    private func string(path path: String) -> String? {
-        let manager = NSFileManager.defaultManager()
-        var isDirectory: ObjCBool = false
-        if !manager.fileExistsAtPath(path, isDirectory: &isDirectory) || isDirectory {
-            log("File does not exist at \(path)")
+    private func string(path URL: NSURL) -> String? {
+        do {
+            try URL.checkResourceIsReachable()
+        } catch (_) {
             return nil
         }
         do {
-            return try String(contentsOfFile: path, encoding: NSUTF8StringEncoding)
-        } catch (let e) {
-            log("Failed to read the string from \(path): \(e)")
+            let string = try String(contentsOfURL: URL, encoding: NSUTF8StringEncoding)
+            return string
+        } catch (_) {
             return nil
         }
     }

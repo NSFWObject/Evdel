@@ -11,7 +11,13 @@ import Cocoa
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
     
+    @IBOutlet weak var viewMenu: NSMenuItem! {
+        didSet {
+        }
+    }
+    
     func applicationWillBecomeActive(notification: NSNotification) {
+
     }
     
     func applicationShouldHandleReopen(sender: NSApplication, hasVisibleWindows flag: Bool) -> Bool {
@@ -22,6 +28,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         NSApp.activateIgnoringOtherApps(true)
         
         processCommandLineArguments()
+        setMenuReference()
     }
     
     func applicationWillTerminate(aNotification: NSNotification) {
@@ -47,6 +54,14 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         let arguments = NSProcessInfo.processInfo().arguments
         log("Opening files from command line arguments: \(arguments)")
         FileOpeningService.sharedInstance.handleArguments(arguments)
+    }
+    
+    private func setMenuReference() {
+        if let window = NSApp.keyWindow {
+            if let controller = window.windowController as? WindowController {
+                controller.viewMenu = viewMenu
+            }
+        }
     }
     
 }

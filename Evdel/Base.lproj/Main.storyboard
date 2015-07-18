@@ -59,48 +59,20 @@
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <menu key="submenu" title="File" id="8MT-J4-lpn">
                                     <items>
-                                        <menuItem title="New" enabled="NO" keyEquivalent="n" id="vUb-lx-uHH">
+                                        <menuItem title="Open Left…" keyEquivalent="1" id="Teh-xB-Kgh">
                                             <connections>
-                                                <action selector="newDocument:" target="Ady-hI-5gd" id="WzT-Qp-HfU"/>
+                                                <action selector="openLeftFile:" target="Ady-hI-5gd" id="TQc-VA-Bj1"/>
                                             </connections>
                                         </menuItem>
-                                        <menuItem title="Open…" keyEquivalent="o" id="4Cq-0g-LCI">
+                                        <menuItem title="Open Right…" keyEquivalent="2" id="M2J-5B-oip">
                                             <connections>
-                                                <action selector="openDocument:" target="Ady-hI-5gd" id="xxC-nM-i6v"/>
+                                                <action selector="openRightFile:" target="Ady-hI-5gd" id="TqR-7Z-gfe"/>
                                             </connections>
-                                        </menuItem>
-                                        <menuItem title="Open Recent" id="ztD-VQ-Yq0">
-                                            <modifierMask key="keyEquivalentModifierMask"/>
-                                            <menu key="submenu" title="Open Recent" systemMenu="recentDocuments" id="Svl-gY-c70">
-                                                <items>
-                                                    <menuItem title="Clear Menu" id="ShP-Fl-9rj">
-                                                        <connections>
-                                                            <action selector="clearRecentDocuments:" target="Ady-hI-5gd" id="FXp-WI-gR8"/>
-                                                        </connections>
-                                                    </menuItem>
-                                                </items>
-                                            </menu>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="N9b-hI-xiK"/>
                                         <menuItem title="Close" keyEquivalent="w" id="rKD-Pk-hXM">
                                             <connections>
                                                 <action selector="performClose:" target="Ady-hI-5gd" id="2EQ-Fu-xrv"/>
-                                            </connections>
-                                        </menuItem>
-                                        <menuItem title="Save" enabled="NO" keyEquivalent="s" id="Ffh-uU-GnQ">
-                                            <connections>
-                                                <action selector="saveDocument:" target="Ady-hI-5gd" id="bcz-Hq-tQY"/>
-                                            </connections>
-                                        </menuItem>
-                                        <menuItem title="Save As…" enabled="NO" keyEquivalent="S" id="hcy-BP-9tk">
-                                            <connections>
-                                                <action selector="saveDocumentAs:" target="Ady-hI-5gd" id="MWm-fQ-8dH"/>
-                                            </connections>
-                                        </menuItem>
-                                        <menuItem title="Revert to Saved" enabled="NO" id="OpS-YL-JzN">
-                                            <modifierMask key="keyEquivalentModifierMask"/>
-                                            <connections>
-                                                <action selector="revertDocumentToSaved:" target="Ady-hI-5gd" id="T0g-tG-Nvu"/>
                                             </connections>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="aSi-eU-H9v"/>
@@ -112,6 +84,28 @@
                                         <menuItem title="Print…" keyEquivalent="p" id="Vk6-EW-7Eb">
                                             <connections>
                                                 <action selector="print:" target="Ady-hI-5gd" id="3RR-X7-zjE"/>
+                                            </connections>
+                                        </menuItem>
+                                    </items>
+                                </menu>
+                            </menuItem>
+                            <menuItem title="View" id="reB-Lx-r3d">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <menu key="submenu" title="View" id="RAq-Om-Si6">
+                                    <items>
+                                        <menuItem title="Left" keyEquivalent="[" id="uKC-Ba-CZo">
+                                            <connections>
+                                                <action selector="viewModeMenuAction:" target="Ady-hI-5gd" id="plz-sO-O1G"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Both" state="on" tag="1" keyEquivalent="|" id="4DN-d6-qgI">
+                                            <connections>
+                                                <action selector="viewModeMenuAction:" target="Ady-hI-5gd" id="YQi-fN-gd2"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Right" tag="2" keyEquivalent="]" id="Lef-uM-cOT">
+                                            <connections>
+                                                <action selector="viewModeMenuAction:" target="Ady-hI-5gd" id="v1w-sg-3eB"/>
                                             </connections>
                                         </menuItem>
                                     </items>
@@ -160,7 +154,11 @@
                         <outlet property="delegate" destination="Voe-Tx-rLC" id="PrD-fu-P6m"/>
                     </connections>
                 </application>
-                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="Evdel" customModuleProvider="target"/>
+                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="Evdel" customModuleProvider="target">
+                    <connections>
+                        <outlet property="viewMenu" destination="reB-Lx-r3d" id="sZW-fc-okO"/>
+                    </connections>
+                </customObject>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="75" y="0.0"/>
@@ -170,7 +168,7 @@
             <objects>
                 <windowController id="B8D-0N-5wS" customClass="WindowController" customModule="Evdel" customModuleProvider="target" sceneMemberID="viewController">
                     <window key="window" title="Evdel" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" frameAutosaveName="DiffWindow" animationBehavior="default" id="IQv-IB-iLA">
-                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" unifiedTitleAndToolbar="YES" fullSizeContentView="YES"/>
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" unifiedTitleAndToolbar="YES"/>
                         <windowCollectionBehavior key="collectionBehavior" fullScreenPrimary="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="196" y="240" width="480" height="270"/>
@@ -195,10 +193,10 @@
                                                 <segment label="Both" selected="YES" tag="1"/>
                                                 <segment label="Right"/>
                                             </segments>
-                                            <connections>
-                                                <action selector="fileModeSegmentedControlAction:" target="B8D-0N-5wS" id="PXA-WU-JKw"/>
-                                            </connections>
                                         </segmentedCell>
+                                        <connections>
+                                            <action selector="viewModeSegmentedControlAction:" target="Oky-zY-oP4" id="BzA-M6-7WP"/>
+                                        </connections>
                                     </segmentedControl>
                                 </toolbarItem>
                                 <toolbarItem implicitItemIdentifier="5B60B4EA-9BE6-4F96-A19B-42AD53BB2DD7" label="" paletteLabel="" image="NSSidebarTemplate" id="Mnm-vH-tFz">
@@ -241,6 +239,7 @@
                         </toolbar>
                     </window>
                     <connections>
+                        <outlet property="viewModeSegmentedControl" destination="KEj-A8-vYE" id="Z4k-kH-7vk"/>
                         <segue destination="XfG-lQ-9wD" kind="relationship" relationship="window.shadowedContentViewController" id="cq2-FE-JQM"/>
                     </connections>
                 </windowController>
@@ -256,6 +255,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
+                            <containerView translatesAutoresizingMaskIntoConstraints="NO" id="9Th-HM-w7d">
+                                <rect key="frame" x="0.0" y="220" width="480" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="V8a-TD-Mt7"/>
+                                </constraints>
+                                <animations/>
+                                <connections>
+                                    <segue destination="TcR-8T-HaP" kind="embed" id="Hzs-Za-F8e"/>
+                                </connections>
+                            </containerView>
                             <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IjH-Pl-jke">
                                 <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                                 <clipView key="contentView" copiesOnScroll="NO" id="Ana-fN-z3s">
@@ -299,9 +308,12 @@
                             </scrollView>
                         </subviews>
                         <constraints>
+                            <constraint firstItem="9Th-HM-w7d" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="0U4-tF-u9l"/>
                             <constraint firstAttribute="bottom" secondItem="IjH-Pl-jke" secondAttribute="bottom" id="6dc-Sz-eG3"/>
+                            <constraint firstAttribute="trailing" secondItem="9Th-HM-w7d" secondAttribute="trailing" id="92y-a0-Ng1"/>
+                            <constraint firstItem="IjH-Pl-jke" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="EjS-FZ-4q5"/>
                             <constraint firstItem="IjH-Pl-jke" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="JsZ-E9-iob"/>
-                            <constraint firstItem="IjH-Pl-jke" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="hEd-Tp-7cj"/>
+                            <constraint firstItem="9Th-HM-w7d" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="UKn-HZ-bfv"/>
                             <constraint firstAttribute="trailing" secondItem="IjH-Pl-jke" secondAttribute="trailing" id="mbI-YD-PdA"/>
                         </constraints>
                         <animations/>
@@ -314,6 +326,58 @@
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="75" y="655"/>
+        </scene>
+        <!--Dropping View Controller-->
+        <scene sceneID="DaR-50-NKr">
+            <objects>
+                <viewController id="TcR-8T-HaP" customClass="DroppingViewController" customModule="Evdel" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="znp-IW-aGT">
+                        <rect key="frame" x="0.0" y="0.0" width="500" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <button focusRingType="none" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="PVq-E6-nMb" customClass="DropZoneButton" customModule="Evdel" customModuleProvider="target">
+                                <rect key="frame" x="10" y="10" width="235" height="280"/>
+                                <animations/>
+                                <buttonCell key="cell" type="square" title="Choose File" bezelStyle="shadowlessSquare" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingHead" state="on" borderStyle="border" focusRingType="none" imageScaling="proportionallyDown" inset="2" id="Tbc-na-R7E" customClass="DropZoneButtonCell" customModule="Evdel" customModuleProvider="target">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="_leftButtonAction:" target="TcR-8T-HaP" id="Mbp-uP-R4P"/>
+                                </connections>
+                            </button>
+                            <button focusRingType="none" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="hEv-MS-A8r" customClass="DropZoneButton" customModule="Evdel" customModuleProvider="target">
+                                <rect key="frame" x="255" y="10" width="235" height="280"/>
+                                <animations/>
+                                <buttonCell key="cell" type="square" title="Or Drop It" bezelStyle="shadowlessSquare" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingHead" state="on" borderStyle="border" focusRingType="none" imageScaling="proportionallyDown" inset="2" id="ChT-UO-BNH" customClass="DropZoneButtonCell" customModule="Evdel" customModuleProvider="target">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="_rightButtonAction:" target="TcR-8T-HaP" id="vZW-FC-ETQ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="hEv-MS-A8r" firstAttribute="leading" secondItem="PVq-E6-nMb" secondAttribute="trailing" constant="10" id="2uy-jI-3Jb"/>
+                            <constraint firstItem="hEv-MS-A8r" firstAttribute="width" secondItem="PVq-E6-nMb" secondAttribute="width" id="3qB-HX-cVQ"/>
+                            <constraint firstAttribute="bottom" secondItem="PVq-E6-nMb" secondAttribute="bottom" constant="10" id="Hwo-Mf-WXV"/>
+                            <constraint firstItem="hEv-MS-A8r" firstAttribute="top" secondItem="znp-IW-aGT" secondAttribute="top" constant="10" id="QVA-hA-wli"/>
+                            <constraint firstItem="PVq-E6-nMb" firstAttribute="top" secondItem="znp-IW-aGT" secondAttribute="top" constant="10" id="bTz-jJ-jVS"/>
+                            <constraint firstAttribute="bottom" secondItem="hEv-MS-A8r" secondAttribute="bottom" constant="10" id="htu-bn-ZIg"/>
+                            <constraint firstItem="PVq-E6-nMb" firstAttribute="leading" secondItem="znp-IW-aGT" secondAttribute="leading" constant="10" id="leD-FW-8uU"/>
+                            <constraint firstAttribute="trailing" secondItem="hEv-MS-A8r" secondAttribute="trailing" constant="10" id="w7W-JK-zkZ"/>
+                        </constraints>
+                        <animations/>
+                    </view>
+                    <connections>
+                        <outlet property="leftButton" destination="PVq-E6-nMb" id="bD9-Ch-sEL"/>
+                        <outlet property="rightButton" destination="hEv-MS-A8r" id="pEU-Co-yXu"/>
+                    </connections>
+                </viewController>
+                <customObject id="wCm-qu-vQX" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-449" y="699"/>
         </scene>
     </scenes>
     <resources>

@@ -15,6 +15,9 @@
 		5C05E4B01B35F22900D97E13 /* EvdelUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C05E4AF1B35F22900D97E13 /* EvdelUITests.swift */; };
 		5C0E71C41B47B0100093CAF6 /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5C0E71C11B47B0040093CAF6 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5C0E71C51B47B0100093CAF6 /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5CC02BF41B47981300A99D6B /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5C11815C1B5B153D00231563 /* ViewModeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C11815B1B5B153D00231563 /* ViewModeManager.swift */; };
+		5C1DA1201B5AD12400F35E71 /* DroppingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1DA11F1B5AD12400F35E71 /* DroppingViewController.swift */; };
+		5C1DA1221B5B0B0700F35E71 /* FileOpeningManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1DA1211B5B0B0700F35E71 /* FileOpeningManager.swift */; };
 		5C2503651B4D76B600EB098B /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5C0E71C11B47B0040093CAF6 /* Nimble.framework */; };
 		5C2503671B4D76C600EB098B /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C0E71C11B47B0040093CAF6 /* Nimble.framework */; };
 		5C6DD8CF1B43811E0018ACFE /* LoggingUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6DD8CE1B43811E0018ACFE /* LoggingUtils.swift */; };
@@ -144,6 +147,9 @@
 		5C05E4B11B35F22900D97E13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5C05E4CA1B36055300D97E13 /* Evdel.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Evdel.playground; sourceTree = "<group>"; };
 		5C0E71C11B47B0040093CAF6 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/Mac/Nimble.framework; sourceTree = "<group>"; };
+		5C11815B1B5B153D00231563 /* ViewModeManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModeManager.swift; sourceTree = "<group>"; };
+		5C1DA11F1B5AD12400F35E71 /* DroppingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DroppingViewController.swift; sourceTree = "<group>"; };
+		5C1DA1211B5B0B0700F35E71 /* FileOpeningManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileOpeningManager.swift; sourceTree = "<group>"; };
 		5C6DD8CE1B43811E0018ACFE /* LoggingUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggingUtils.swift; sourceTree = "<group>"; };
 		5C8584C51B57FE2400B8A0F2 /* DiffLayoutManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiffLayoutManager.swift; sourceTree = "<group>"; };
 		5CC02BF41B47981300A99D6B /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/Mac/Quick.framework; sourceTree = "<group>"; };
@@ -251,9 +257,12 @@
 			isa = PBXGroup;
 			children = (
 				5C6DD8CD1B4381120018ACFE /* Utils */,
-				5CDB83501B4279BA001F1D39 /* Evdel.entitlements */,
+				5C05E4981B35F22900D97E13 /* Main.storyboard */,
 				5C05E4921B35F22900D97E13 /* AppDelegate.swift */,
+				5C1DA11F1B5AD12400F35E71 /* DroppingViewController.swift */,
 				5CC483771B37A35E00F989CF /* WindowController.swift */,
+				5C1DA1211B5B0B0700F35E71 /* FileOpeningManager.swift */,
+				5C11815B1B5B153D00231563 /* ViewModeManager.swift */,
 				5C05E4941B35F22900D97E13 /* ViewController.swift */,
 				5C18134D1B426B2D00E60F68 /* TextView */,
 				5CDB834D1B42766F001F1D39 /* Services */,
@@ -350,8 +359,8 @@
 		5CDB834C1B427580001F1D39 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				5CDB83501B4279BA001F1D39 /* Evdel.entitlements */,
 				5C05E4961B35F22900D97E13 /* Assets.xcassets */,
-				5C05E4981B35F22900D97E13 /* Main.storyboard */,
 				5C05E49B1B35F22900D97E13 /* Info.plist */,
 			);
 			name = Resources;
@@ -591,9 +600,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				5C05E4951B35F22900D97E13 /* ViewController.swift in Sources */,
+				5C1DA1221B5B0B0700F35E71 /* FileOpeningManager.swift in Sources */,
+				5C1DA1201B5AD12400F35E71 /* DroppingViewController.swift in Sources */,
 				5CC483781B37A35E00F989CF /* WindowController.swift in Sources */,
 				5C05E4931B35F22900D97E13 /* AppDelegate.swift in Sources */,
 				5C8584C61B57FE2400B8A0F2 /* DiffLayoutManager.swift in Sources */,
+				5C11815C1B5B153D00231563 /* ViewModeManager.swift in Sources */,
 				5C6DD8CF1B43811E0018ACFE /* LoggingUtils.swift in Sources */,
 				5CDB834F1B42768C001F1D39 /* FileOpeningService.swift in Sources */,
 			);
