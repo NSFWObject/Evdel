@@ -13,3 +13,6 @@
 [submodule "Carthage/Checkouts/Quick"]
 	path = Carthage/Checkouts/Quick
 	url = https://github.com/Quick/Quick.git
+[submodule "Carthage/Checkouts/replay-ios"]
+	path = Carthage/Checkouts/replay-ios
+	url = https://github.com/Originate/replay-ios.git

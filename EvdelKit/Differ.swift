@@ -15,12 +15,6 @@ public class Differ {
     }
     
     public func diff(left left: String, right: String, plugin: DiffPlugin = DiffMatchPatchPlugin()) -> [Diff] {
-        let diffs: [Diff]
-        do {
-            diffs = try plugin.diff(left: left, right: right)
-        } catch (_) {
-            diffs = []
-        }
-        return diffs
+        return plugin.diff(left: left, right: right)
     }
 }

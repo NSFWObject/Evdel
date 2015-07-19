@@ -40,45 +40,30 @@ public class FileOpeningService {
 //            }
 //        }
     }
-    
-    public func handleArguments(arguments:[String]) -> Bool {
-        if arguments.count < 3 {
-            return false
-        }
         
-        let workingDirectory = NSURL(fileURLWithPath: arguments[3])
-        let left = NSURL(fileURLWithPath: arguments[1])
-        let right = NSURL(fileURLWithPath: arguments[2])
-        if let absoluteLeft = isFileExist(left, workingDirectory: workingDirectory), absoluteRight = isFileExist(right, workingDirectory: workingDirectory) {
-            self.deferredPaths = [absoluteLeft.relativePath!, absoluteRight.relativePath!]
-            return true
-        }
-        return false
-    }
-    
     private func isFileExist(URL: NSURL, workingDirectory: NSURL) -> NSURL? {
         if isFileExist(URL) {
             return URL
         }
-        guard let path = URL.relativePath else {
-            return nil
+        if let path = URL.relativePath  {
+            let absoluteURL = workingDirectory.URLByAppendingPathComponent(path)
+            return isFileExist(absoluteURL) ? absoluteURL : nil
         }
-        let absoluteURL = workingDirectory.URLByAppendingPathComponent(path)
-        return isFileExist(absoluteURL) ? absoluteURL : nil
+        return nil
     }
     
     private func isFileExist(URL: NSURL) -> Bool {
-        guard let path = URL.relativePath else {
-            return false
+        if let path = URL.relativePath  {
+            var isDirectory: ObjCBool = false
+            if !NSFileManager.defaultManager().fileExistsAtPath(path, isDirectory: &isDirectory) {
+                return false
+            }
+            if isDirectory {
+                return false
+            }
+            return true
         }
-        var isDirectory: ObjCBool = false
-        if !NSFileManager.defaultManager().fileExistsAtPath(path, isDirectory: &isDirectory) {
-            return false
-        }
-        if isDirectory {
-            return false
-        }
-        return true
+        return false
     }
     
     private func isValidDirectoryWithPWD(arg: String, pwd: String) -> String? {

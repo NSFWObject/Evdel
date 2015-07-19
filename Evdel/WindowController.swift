@@ -16,12 +16,10 @@ class WindowController: NSWindowController {
     var viewMenu: NSMenuItem!
 
     override func windowDidLoad() {
-        guard let window = self.window else {
-            assertionFailure("Expected to have a window by now")
-            return
+        if let window = self.window {
+            window.titleVisibility = .Hidden
         }
         
-        window.titleVisibility = .Hidden
     }
 }
 

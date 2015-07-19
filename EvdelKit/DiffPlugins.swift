@@ -12,10 +12,10 @@ import DiffMatchPatch
 public class DiffMatchPatchPlugin: DiffPlugin {
     private let engine: DiffMatchPatch = DiffMatchPatch()
     
-    public func diff(left left: String, right: String) throws -> [Diff] {
+    public func diff(left left: String, right: String) -> [Diff] {
         let dmpResult = engine.diff_mainOfOldString(left, andNewString: right)
         if dmpResult == nil {
-            throw DiffPluginError.Unknown
+            return []
         }
         engine.diff_cleanupMerge(dmpResult)
         engine.diff_cleanupSemantic(dmpResult)

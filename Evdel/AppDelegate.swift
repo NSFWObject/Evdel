@@ -42,23 +42,22 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         return true
     }
     
-    func application(sender: NSApplication, openFiles filenames: [String]) {
-        if filenames.count != 2 {
+    func application(sender: NSApplication, openFiles filenames: [AnyObject]) {
+        if let filenames = filenames as? [String] {
+            if filenames.count != 2 {
+                NSApp.replyToOpenOrPrint(.Failure)
+                return
+            }
+            FileOpeningService.sharedInstance.deferredPaths = filenames
+            NSApp.replyToOpenOrPrint(.Success)
+        } else {
             NSApp.replyToOpenOrPrint(.Failure)
-            return
         }
-        FileOpeningService.sharedInstance.deferredPaths = filenames
-        NSApp.replyToOpenOrPrint(.Success)
     }
-    
-    private func processCommandLineArguments() {
-        let arguments = NSProcessInfo.processInfo().arguments
-        FileOpeningService.sharedInstance.handleArguments(arguments)
-    }
-    
+        
     private func setMenuReference() {
-        if let window = NSApp.keyWindow {
-            if let controller = window.windowController as? WindowController {
+        if let window = NSApplication.sharedApplication().windows.first as? NSWindow {
+            if let controller = window.windowController() as? WindowController {
                 controller.viewMenu = viewMenu
             }
         }

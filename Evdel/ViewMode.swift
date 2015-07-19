@@ -15,7 +15,7 @@ public enum ViewMode: Int {
     case Left = 0, Both = 1, Right = 2
 }
 
-extension ViewMode: CustomStringConvertible {
+extension ViewMode: Printable {
     public var description: String {
         switch self {
         case .Left:
@@ -58,13 +58,13 @@ extension WindowController {
     }
     
     private func selectMenuWithTag(tag: Int) {
-        for menu in viewMenu.submenu!.itemArray {
+        for menu in viewMenu.submenu!.itemArray as! [NSMenuItem] {
             menu.state = menu.tag == tag ? NSOnState : NSOffState
         }
     }
     
     private func selectMenuItem(selectedMenuItem: NSMenuItem) {
-        for menu in viewMenu.submenu!.itemArray {
+        for menu in viewMenu.submenu!.itemArray as! [NSMenuItem] {
             menu.state = menu == selectedMenuItem ? NSOnState : NSOffState
         }
     }

@@ -66,20 +66,19 @@ class DroppingViewController: NSViewController {
             if status != NSFileHandlingPanelOKButton {
                 return
             }
-            guard let url = open.URL else {
-                return
+            if let url = open.URL {
+                let newSide: FileURL
+                switch side {
+                case .Left(_):
+                    newSide = .Left(url: url)
+                    self.leftURL = newSide
+                case .Right(_):
+                    newSide = .Right(url: url)
+                    self.rightURL = newSide
+                }
+                self.updateButton(newSide)
+                self.updateIsReadyForDiff()
             }
-            let newSide: FileURL
-            switch side {
-            case .Left(_):
-                newSide = .Left(url: url)
-                self.leftURL = newSide
-            case .Right(_):
-                newSide = .Right(url: url)
-                self.rightURL = newSide
-            }
-            self.updateButton(newSide)
-            self.updateIsReadyForDiff()
         }
     }
     
@@ -126,7 +125,7 @@ class DroppingViewController: NSViewController {
     
     private func buttonAttributedStringForTitle(title: String) -> NSAttributedString {
         let paragraph = NSMutableParagraphStyle()
-        paragraph.alignment = .Center
+        paragraph.alignment = .CenterTextAlignment
         let attributedString = NSAttributedString(string: title, attributes: [
             NSParagraphStyleAttributeName: paragraph,
             NSForegroundColorAttributeName: NSColor.darkGrayColor()

@@ -51,8 +51,8 @@ class DiffViewController: NSViewController {
         NSNotificationCenter.defaultCenter().addObserverForName(FileOpeningManagerShouldOpenFilesNotification, object: nil, queue: nil) { [unowned self] note in
             if let userInfo = note.userInfo, left = userInfo[FileOpeningManagerLeftFileKey] as? NSURL, right = userInfo[FileOpeningManagerRightFileKey] as? NSURL {
                 PFAnalytics.trackEvent("open", dimensions:[
-                    "left": left.absoluteString,
-                    "right": right.absoluteString
+                    "left": left.absoluteString!,
+                    "right": right.absoluteString!
                 ])
                 self.openDiff(leftPath: left, rightPath: right)
             }
@@ -95,7 +95,7 @@ class DiffViewController: NSViewController {
     private func displayDiffs(diffs: [Diff], allowedOperations: [Diff.DiffType]) {
         let attributedString = NSMutableAttributedString()
         for diff in diffs {
-            if allowedOperations.contains({ $0 == diff.type }) {
+            if find(allowedOperations, diff.type) != nil {
                 attributedString.appendAttributedString(attributedStringForDiff(diff))
             }
         }
@@ -130,10 +130,10 @@ class DiffViewController: NSViewController {
     }
     
     private func diffsForFilePair(leftPath leftPath: NSURL, rightPath: NSURL) -> [Diff]? {
-        guard let left = string(path: leftPath), right = string(path: rightPath) else {
-            return nil
+        if let left = string(path: leftPath), right = string(path: rightPath) {
+            return diffService.diff(left: left, right: right)
         }
-        return diffService.diff(left: left, right: right)
+        return nil
     }
     
     private func pathsFromArguments(arguments: [String]) -> [String]? {
@@ -153,28 +153,20 @@ class DiffViewController: NSViewController {
         if manager.fileExistsAtPath(path) {
             return path
         }
-        guard let pwd = pwd else {
-            return nil
-        }
-        let result = pwd + path
-        if manager.fileExistsAtPath(result) {
-            return result
+        if let pwd = pwd  {
+            let result = pwd + path
+            if manager.fileExistsAtPath(result) {
+                return result
+            }
         }
         return nil
     }
     
     private func string(path URL: NSURL) -> String? {
-        do {
-            try URL.checkResourceIsReachable()
-        } catch (_) {
-            return nil
+        if URL.checkResourceIsReachableAndReturnError(nil) {
+            return String(contentsOfURL: URL, encoding: NSUTF8StringEncoding)
         }
-        do {
-            let string = try String(contentsOfURL: URL, encoding: NSUTF8StringEncoding)
-            return string
-        } catch (_) {
-            return nil
-        }
+        return nil
     }
 
 }

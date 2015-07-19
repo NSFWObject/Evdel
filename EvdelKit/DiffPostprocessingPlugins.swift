@@ -35,7 +35,7 @@ public struct CombineDeletionInsertionPlugin: DiffPostprocessingPlugin {
         }
         var index: Int = 0
         var result: [Diff] = Array(diffs[0...1])
-        repeat {
+        do {
             let diff1 = result[index]
             let diff2 = result[index+1]
             switch (diff1.type, diff2.type) {

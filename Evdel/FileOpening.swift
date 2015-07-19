@@ -78,14 +78,13 @@ extension WindowController {
             if handler != NSFileHandlingPanelOKButton {
                 return
             }
-            guard let URL = open.URL else {
-                return
-            }
-            switch side {
-            case .Left:
-                manager.leftFile = URL
-            case .Right:
-                manager.rightFile = URL
+            if let URL = open.URL {
+                switch side {
+                case .Left:
+                    manager.leftFile = URL
+                case .Right:
+                    manager.rightFile = URL
+                }
             }
         }
     }

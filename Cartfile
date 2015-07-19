@@ -1,2 +1,3 @@
 github "zats/google-diff-match-patch" "master"
 github "ReactiveCocoa/ReactiveCocoa" "swift2"
+github "Originate/replay-ios" "master"

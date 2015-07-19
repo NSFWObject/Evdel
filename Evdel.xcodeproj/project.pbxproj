@@ -12,19 +12,16 @@
 		5C05E4971B35F22900D97E13 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C05E4961B35F22900D97E13 /* Assets.xcassets */; };
 		5C05E49A1B35F22900D97E13 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C05E4981B35F22900D97E13 /* Main.storyboard */; };
 		5C05E4A51B35F22900D97E13 /* EvdelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C05E4A41B35F22900D97E13 /* EvdelTests.swift */; };
-		5C05E4B01B35F22900D97E13 /* EvdelUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C05E4AF1B35F22900D97E13 /* EvdelUITests.swift */; };
-		5C0E71C41B47B0100093CAF6 /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5C0E71C11B47B0040093CAF6 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		5C0E71C51B47B0100093CAF6 /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5CC02BF41B47981300A99D6B /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5C11815C1B5B153D00231563 /* ViewMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C11815B1B5B153D00231563 /* ViewMode.swift */; };
 		5C11815E1B5B337E00231563 /* Printing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C11815D1B5B337E00231563 /* Printing.swift */; };
 		5C11816D1B5B3F3600231563 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C1181691B5B3F2C00231563 /* Bolts.framework */; };
 		5C11816E1B5B3F3600231563 /* Bolts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5C1181691B5B3F2C00231563 /* Bolts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5C11816F1B5B3F3600231563 /* ParseOSX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C11816A1B5B3F2C00231563 /* ParseOSX.framework */; };
 		5C1181701B5B3F3600231563 /* ParseOSX.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5C11816A1B5B3F2C00231563 /* ParseOSX.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		5C1181761B5B3F7700231563 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C1181721B5B3F6D00231563 /* Crashlytics.framework */; };
-		5C1181771B5B3F7700231563 /* Crashlytics.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5C1181721B5B3F6D00231563 /* Crashlytics.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		5C1181781B5B3F7700231563 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C1181731B5B3F6D00231563 /* Fabric.framework */; };
-		5C1181791B5B3F7700231563 /* Fabric.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5C1181731B5B3F6D00231563 /* Fabric.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5C1BD13B1B5B4B9900BDC2BA /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C1BD1371B5B4B8800BDC2BA /* Crashlytics.framework */; };
+		5C1BD13C1B5B4B9900BDC2BA /* Crashlytics.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5C1BD1371B5B4B8800BDC2BA /* Crashlytics.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5C1BD13D1B5B4B9900BDC2BA /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C1BD1381B5B4B8800BDC2BA /* Fabric.framework */; };
+		5C1BD13E1B5B4B9900BDC2BA /* Fabric.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5C1BD1381B5B4B8800BDC2BA /* Fabric.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5C1DA1201B5AD12400F35E71 /* DroppingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1DA11F1B5AD12400F35E71 /* DroppingViewController.swift */; };
 		5C1DA1221B5B0B0700F35E71 /* FileOpening.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1DA1211B5B0B0700F35E71 /* FileOpening.swift */; };
 		5C2503651B4D76B600EB098B /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5C0E71C11B47B0040093CAF6 /* Nimble.framework */; };
@@ -36,8 +33,6 @@
 		5CCCA1C01B536301000725CB /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CCCA1BF1B536301000725CB /* main.swift */; };
 		5CCD8F4B1B3BDAE9001FFDB6 /* DiffMatchPatch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CCD8F491B3BDAE3001FFDB6 /* DiffMatchPatch.framework */; };
 		5CCD8F4C1B3BDAE9001FFDB6 /* DiffMatchPatch.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5CCD8F491B3BDAE3001FFDB6 /* DiffMatchPatch.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		5CCFD9AF1B4622F800FFC8D8 /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C005E211B4622D60022DB98 /* ReactiveCocoa.framework */; };
-		5CCFD9B01B4622F800FFC8D8 /* ReactiveCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5C005E211B4622D60022DB98 /* ReactiveCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5CCFD9BC1B4629EA00FFC8D8 /* EvdelKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 5CCFD9BB1B4629EA00FFC8D8 /* EvdelKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5CCFD9C31B4629EA00FFC8D8 /* EvdelKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CCFD9B91B4629EA00FFC8D8 /* EvdelKit.framework */; };
 		5CCFD9CE1B4629EA00FFC8D8 /* EvdelKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CCFD9B91B4629EA00FFC8D8 /* EvdelKit.framework */; };
@@ -48,20 +43,11 @@
 		5CCFD9DD1B462A4100FFC8D8 /* Differ.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CCFD9D91B462A4100FFC8D8 /* Differ.swift */; };
 		5CCFD9DE1B462A7E00FFC8D8 /* DiffMatchPatch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CCD8F491B3BDAE3001FFDB6 /* DiffMatchPatch.framework */; };
 		5CCFD9E31B462BE200FFC8D8 /* DiffPostprocessingPluginsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CCFD9E21B462BE200FFC8D8 /* DiffPostprocessingPluginsTests.swift */; };
-		5CCFD9F61B464E5000FFC8D8 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CCFD9F11B464E4600FFC8D8 /* Result.framework */; };
-		5CCFD9F71B464E5000FFC8D8 /* Result.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5CCFD9F11B464E4600FFC8D8 /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5CDB834F1B42768C001F1D39 /* FileOpeningService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDB834E1B42768C001F1D39 /* FileOpeningService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		5C05E4A11B35F22900D97E13 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5C05E4871B35F22900D97E13 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 5C05E48E1B35F22900D97E13;
-			remoteInfo = Evdel;
-		};
-		5C05E4AC1B35F22900D97E13 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 5C05E4871B35F22900D97E13 /* Project object */;
 			proxyType = 1;
@@ -99,26 +85,13 @@
 			dstSubfolderSpec = 10;
 			files = (
 				5CCD8F4C1B3BDAE9001FFDB6 /* DiffMatchPatch.framework in Embed Frameworks */,
+				5C1BD13C1B5B4B9900BDC2BA /* Crashlytics.framework in Embed Frameworks */,
 				5CCFD9CF1B4629EA00FFC8D8 /* EvdelKit.framework in Embed Frameworks */,
 				5C1181701B5B3F3600231563 /* ParseOSX.framework in Embed Frameworks */,
-				5C1181791B5B3F7700231563 /* Fabric.framework in Embed Frameworks */,
-				5CCFD9F71B464E5000FFC8D8 /* Result.framework in Embed Frameworks */,
-				5CCFD9B01B4622F800FFC8D8 /* ReactiveCocoa.framework in Embed Frameworks */,
 				5C11816E1B5B3F3600231563 /* Bolts.framework in Embed Frameworks */,
-				5C1181771B5B3F7700231563 /* Crashlytics.framework in Embed Frameworks */,
+				5C1BD13E1B5B4B9900BDC2BA /* Fabric.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5C0E71C31B47B00A0093CAF6 /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				5C0E71C41B47B0100093CAF6 /* Nimble.framework in CopyFiles */,
-				5C0E71C51B47B0100093CAF6 /* Quick.framework in CopyFiles */,
-			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		5CA5FB141B46619D003F32A8 /* CopyFiles */ = {
@@ -144,7 +117,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		5C005E211B4622D60022DB98 /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveCocoa.framework; path = Carthage/Build/Mac/ReactiveCocoa.framework; sourceTree = "<group>"; };
 		5C05E48F1B35F22900D97E13 /* Evdel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Evdel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C05E4921B35F22900D97E13 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5C05E4941B35F22900D97E13 /* DiffViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiffViewController.swift; sourceTree = "<group>"; };
@@ -154,7 +126,6 @@
 		5C05E4A01B35F22900D97E13 /* EvdelTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EvdelTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C05E4A41B35F22900D97E13 /* EvdelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvdelTests.swift; sourceTree = "<group>"; };
 		5C05E4A61B35F22900D97E13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5C05E4AB1B35F22900D97E13 /* EvdelUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EvdelUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C05E4AF1B35F22900D97E13 /* EvdelUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvdelUITests.swift; sourceTree = "<group>"; };
 		5C05E4B11B35F22900D97E13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5C05E4CA1B36055300D97E13 /* Evdel.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Evdel.playground; sourceTree = "<group>"; };
@@ -163,8 +134,8 @@
 		5C11815D1B5B337E00231563 /* Printing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Printing.swift; sourceTree = "<group>"; };
 		5C1181691B5B3F2C00231563 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		5C11816A1B5B3F2C00231563 /* ParseOSX.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseOSX.framework; sourceTree = "<group>"; };
-		5C1181721B5B3F6D00231563 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
-		5C1181731B5B3F6D00231563 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
+		5C1BD1371B5B4B8800BDC2BA /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
+		5C1BD1381B5B4B8800BDC2BA /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
 		5C1DA11F1B5AD12400F35E71 /* DroppingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DroppingViewController.swift; sourceTree = "<group>"; };
 		5C1DA1211B5B0B0700F35E71 /* FileOpening.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileOpening.swift; sourceTree = "<group>"; };
 		5C8584C51B57FE2400B8A0F2 /* DiffLayoutManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiffLayoutManager.swift; sourceTree = "<group>"; };
@@ -183,7 +154,6 @@
 		5CCFD9D81B462A4100FFC8D8 /* DiffPostprocessingPlugins.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiffPostprocessingPlugins.swift; sourceTree = "<group>"; };
 		5CCFD9D91B462A4100FFC8D8 /* Differ.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Differ.swift; sourceTree = "<group>"; };
 		5CCFD9E21B462BE200FFC8D8 /* DiffPostprocessingPluginsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiffPostprocessingPluginsTests.swift; sourceTree = "<group>"; };
-		5CCFD9F11B464E4600FFC8D8 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/Mac/Result.framework; sourceTree = "<group>"; };
 		5CDB834E1B42768C001F1D39 /* FileOpeningService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileOpeningService.swift; sourceTree = "<group>"; };
 		5CDB83501B4279BA001F1D39 /* Evdel.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Evdel.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -194,24 +164,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				5CCD8F4B1B3BDAE9001FFDB6 /* DiffMatchPatch.framework in Frameworks */,
+				5C1BD13B1B5B4B9900BDC2BA /* Crashlytics.framework in Frameworks */,
 				5CCFD9CE1B4629EA00FFC8D8 /* EvdelKit.framework in Frameworks */,
 				5C11816F1B5B3F3600231563 /* ParseOSX.framework in Frameworks */,
-				5C1181781B5B3F7700231563 /* Fabric.framework in Frameworks */,
-				5CCFD9F61B464E5000FFC8D8 /* Result.framework in Frameworks */,
-				5CCFD9AF1B4622F800FFC8D8 /* ReactiveCocoa.framework in Frameworks */,
 				5C11816D1B5B3F3600231563 /* Bolts.framework in Frameworks */,
-				5C1181761B5B3F7700231563 /* Crashlytics.framework in Frameworks */,
+				5C1BD13D1B5B4B9900BDC2BA /* Fabric.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		5C05E49D1B35F22900D97E13 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5C05E4A81B35F22900D97E13 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -265,7 +226,6 @@
 			children = (
 				5C05E48F1B35F22900D97E13 /* Evdel.app */,
 				5C05E4A01B35F22900D97E13 /* EvdelTests.xctest */,
-				5C05E4AB1B35F22900D97E13 /* EvdelUITests.xctest */,
 				5CCFD9B91B4629EA00FFC8D8 /* EvdelKit.framework */,
 				5CCFD9C21B4629EA00FFC8D8 /* EvdelKitTests.xctest */,
 				5CCCA1B81B53611D000725CB /* evdel-katan */,
@@ -316,8 +276,6 @@
 				5C1181681B5B3F2C00231563 /* Parse.com */,
 				5C0E71C11B47B0040093CAF6 /* Nimble.framework */,
 				5CC02BF41B47981300A99D6B /* Quick.framework */,
-				5CCFD9F11B464E4600FFC8D8 /* Result.framework */,
-				5C005E211B4622D60022DB98 /* ReactiveCocoa.framework */,
 				5CCD8F491B3BDAE3001FFDB6 /* DiffMatchPatch.framework */,
 			);
 			name = Frameworks;
@@ -336,8 +294,8 @@
 		5C1181711B5B3F6D00231563 /* Fabric */ = {
 			isa = PBXGroup;
 			children = (
-				5C1181721B5B3F6D00231563 /* Crashlytics.framework */,
-				5C1181731B5B3F6D00231563 /* Fabric.framework */,
+				5C1BD1371B5B4B8800BDC2BA /* Crashlytics.framework */,
+				5C1BD1381B5B4B8800BDC2BA /* Fabric.framework */,
 			);
 			name = Fabric;
 			path = Vendor/Fabric;
@@ -430,7 +388,7 @@
 				5C05E48C1B35F22900D97E13 /* Frameworks */,
 				5C05E48D1B35F22900D97E13 /* Resources */,
 				5C05E4C21B35F5DD00D97E13 /* Embed Frameworks */,
-				5C11815F1B5B3CA100231563 /* Fabric */,
+				5C20B9BA1B5C0997005D1B8E /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -459,25 +417,6 @@
 			productName = EvdelTests;
 			productReference = 5C05E4A01B35F22900D97E13 /* EvdelTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		5C05E4AA1B35F22900D97E13 /* EvdelUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 5C05E4BA1B35F22900D97E13 /* Build configuration list for PBXNativeTarget "EvdelUITests" */;
-			buildPhases = (
-				5C05E4A71B35F22900D97E13 /* Sources */,
-				5C05E4A81B35F22900D97E13 /* Frameworks */,
-				5C05E4A91B35F22900D97E13 /* Resources */,
-				5C0E71C31B47B00A0093CAF6 /* CopyFiles */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				5C05E4AD1B35F22900D97E13 /* PBXTargetDependency */,
-			);
-			name = EvdelUITests;
-			productName = EvdelUITests;
-			productReference = 5C05E4AB1B35F22900D97E13 /* EvdelUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 		5CCCA1B71B53611D000725CB /* evdel-katan */ = {
 			isa = PBXNativeTarget;
@@ -556,10 +495,6 @@
 						CreatedOnToolsVersion = 7.0;
 						TestTargetID = 5C05E48E1B35F22900D97E13;
 					};
-					5C05E4AA1B35F22900D97E13 = {
-						CreatedOnToolsVersion = 7.0;
-						TestTargetID = 5C05E48E1B35F22900D97E13;
-					};
 					5CCCA1B71B53611D000725CB = {
 						CreatedOnToolsVersion = 7.0;
 					};
@@ -588,7 +523,6 @@
 			targets = (
 				5C05E48E1B35F22900D97E13 /* Evdel */,
 				5C05E49F1B35F22900D97E13 /* EvdelTests */,
-				5C05E4AA1B35F22900D97E13 /* EvdelUITests */,
 				5CCFD9B81B4629EA00FFC8D8 /* EvdelKit */,
 				5CCFD9C11B4629EA00FFC8D8 /* EvdelKitTests */,
 				5CCCA1B71B53611D000725CB /* evdel-katan */,
@@ -613,13 +547,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5C05E4A91B35F22900D97E13 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		5CCFD9B71B4629EA00FFC8D8 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -630,19 +557,18 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		5C11815F1B5B3CA100231563 /* Fabric */ = {
+		5C20B9BA1B5C0997005D1B8E /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = Fabric;
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "Vendor/Fabric/Fabric.framework/run 1806f0e415eca8782897d8254a1363122c77c03a 2b5acc049504c1077095f7bd52b60173f9130607ded96d551c1c56e40ba0205f";
+			shellScript = "cp ./Vendor/Fabric/bkp/Fabric.framework/run ./Vendor/Fabric/Fabric.framework/run\ncp ./Vendor/Fabric/bkp/Crashlytics.framework/run ./Vendor/Fabric/Crashlytics.framework/run\n\n./Vendor/Fabric/Fabric.framework/run 1806f0e415eca8782897d8254a1363122c77c03a 2b5acc049504c1077095f7bd52b60173f9130607ded96d551c1c56e40ba0205f\n\nrm ./Vendor/Fabric/Fabric.framework/run\nrm ./Vendor/Fabric/Crashlytics.framework/run";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -668,14 +594,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				5C05E4A51B35F22900D97E13 /* EvdelTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5C05E4A71B35F22900D97E13 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				5C05E4B01B35F22900D97E13 /* EvdelUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -713,11 +631,6 @@
 			isa = PBXTargetDependency;
 			target = 5C05E48E1B35F22900D97E13 /* Evdel */;
 			targetProxy = 5C05E4A11B35F22900D97E13 /* PBXContainerItemProxy */;
-		};
-		5C05E4AD1B35F22900D97E13 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 5C05E48E1B35F22900D97E13 /* Evdel */;
-			targetProxy = 5C05E4AC1B35F22900D97E13 /* PBXContainerItemProxy */;
 		};
 		5CCFD9C51B4629EA00FFC8D8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -784,7 +697,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
@@ -822,7 +735,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
 			};
@@ -840,7 +753,7 @@
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"${SRCROOT}/Carthage/Build/Mac",
-					"${SRCROOT}/Vendor/**",
+					"$(PROJECT_DIR)/Vendor/**",
 				);
 				INFOPLIST_FILE = Evdel/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
@@ -860,7 +773,7 @@
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"${SRCROOT}/Carthage/Build/Mac",
-					"${SRCROOT}/Vendor/**",
+					"$(PROJECT_DIR)/Vendor/**",
 				);
 				INFOPLIST_FILE = Evdel/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
@@ -895,34 +808,6 @@
 			};
 			name = Release;
 		};
-		5C05E4BB1B35F22900D97E13 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = $SRCROOT/Carthage/Build/Mac;
-				INFOPLIST_FILE = EvdelUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.zats.EvdelUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = Evdel;
-				USES_XCTRUNNER = YES;
-			};
-			name = Debug;
-		};
-		5C05E4BC1B35F22900D97E13 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = $SRCROOT/Carthage/Build/Mac;
-				INFOPLIST_FILE = EvdelUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.zats.EvdelUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = Evdel;
-				USES_XCTRUNNER = YES;
-			};
-			name = Release;
-		};
 		5CCCA1BC1B53611D000725CB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -946,6 +831,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -973,6 +859,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -1055,15 +942,6 @@
 			buildConfigurations = (
 				5C05E4B81B35F22900D97E13 /* Debug */,
 				5C05E4B91B35F22900D97E13 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		5C05E4BA1B35F22900D97E13 /* Build configuration list for PBXNativeTarget "EvdelUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				5C05E4BB1B35F22900D97E13 /* Debug */,
-				5C05E4BC1B35F22900D97E13 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

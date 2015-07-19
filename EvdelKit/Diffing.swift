@@ -18,7 +18,9 @@ public struct Diff {
         Change types
      */
     public enum DiffType: String {
-        case Deletion, Insertion, None
+        case Deletion = "Deletion"
+        case Insertion = "Insertion"
+        case None = "None"
     }
     
     public let type: DiffType
@@ -47,7 +49,11 @@ public func == (lhs: Diff, rhs: Diff) -> Bool {
     e.g. diff match patch plugin or git plugin
  */
 public protocol DiffPlugin {  
-    func diff(left left: String, right: String) throws -> [Diff]
+    func diff(left left: String, right: String) -> [Diff]
+}
+
+protocol ErrorType {
+    
 }
 
 public enum DiffPluginError: ErrorType {
@@ -68,7 +74,7 @@ public protocol Diffable {
 }
 
 
- extension Diff: CustomDebugStringConvertible {
+ extension Diff: DebugPrintable {
     public var debugDescription: String {
         switch type {
         case .Insertion:
