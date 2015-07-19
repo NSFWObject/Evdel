@@ -7,6 +7,10 @@
 //
 
 import Cocoa
+import Fabric
+import Crashlytics
+import ParseOSX
+import Bolts
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
@@ -25,14 +29,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
 
     func applicationDidFinishLaunching(aNotification: NSNotification) {
+        Fabric.with([Crashlytics()])
+        Parse.setApplicationId("MIElOdZDocDFoVGmT4eNiQSIYhRyPklAuPOiVNqo", clientKey:"I9WrcpwyCUcwpCX6FNWPqZxHUqtxgKKOqJHUiiSV")
+
         NSApp.activateIgnoringOtherApps(true)
-        
-        processCommandLineArguments()
         setMenuReference()
-    }
-    
-    func applicationWillTerminate(aNotification: NSNotification) {
-        // Insert code here to tear down your application
+        
+        PFAnalytics.trackAppOpenedWithLaunchOptions(nil)
     }
     
     func applicationShouldTerminateAfterLastWindowClosed(sender: NSApplication) -> Bool {
@@ -40,19 +43,16 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     func application(sender: NSApplication, openFiles filenames: [String]) {
-        log("application:openFiles: \(filenames)")
         if filenames.count != 2 {
             NSApp.replyToOpenOrPrint(.Failure)
             return
         }
         FileOpeningService.sharedInstance.deferredPaths = filenames
-        print("FileOpeningService.sharedInstance \(FileOpeningService.sharedInstance.deferredPaths)")
         NSApp.replyToOpenOrPrint(.Success)
     }
     
     private func processCommandLineArguments() {
         let arguments = NSProcessInfo.processInfo().arguments
-        log("Opening files from command line arguments: \(arguments)")
         FileOpeningService.sharedInstance.handleArguments(arguments)
     }
     
@@ -63,6 +63,5 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             }
         }
     }
-    
 }
 

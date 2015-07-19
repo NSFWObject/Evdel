@@ -18,9 +18,7 @@ public class Differ {
         let diffs: [Diff]
         do {
             diffs = try plugin.diff(left: left, right: right)
-        } catch is DiffPluginError {
-            diffs = []
-        } catch {
+        } catch (_) {
             diffs = []
         }
         return diffs

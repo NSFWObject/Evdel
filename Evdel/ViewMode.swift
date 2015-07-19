@@ -15,6 +15,19 @@ public enum ViewMode: Int {
     case Left = 0, Both = 1, Right = 2
 }
 
+extension ViewMode: CustomStringConvertible {
+    public var description: String {
+        switch self {
+        case .Left:
+            return "left"
+        case .Right:
+            return "right"
+        case .Both:
+            return "both"
+        }
+    }
+}
+
 public class ViewModeManager {
     public static let sharedManager = ViewModeManager()
     

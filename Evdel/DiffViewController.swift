@@ -8,6 +8,8 @@
 
 import Cocoa
 import EvdelKit
+import ParseOSX
+import Bolts
 
 class DiffViewController: NSViewController {
     
@@ -48,13 +50,19 @@ class DiffViewController: NSViewController {
         // File did open
         NSNotificationCenter.defaultCenter().addObserverForName(FileOpeningManagerShouldOpenFilesNotification, object: nil, queue: nil) { [unowned self] note in
             if let userInfo = note.userInfo, left = userInfo[FileOpeningManagerLeftFileKey] as? NSURL, right = userInfo[FileOpeningManagerRightFileKey] as? NSURL {
+                PFAnalytics.trackEvent("open", dimensions:[
+                    "left": left.absoluteString,
+                    "right": right.absoluteString
+                ])
                 self.openDiff(leftPath: left, rightPath: right)
             }
         }
         
         // View mode did change
         NSNotificationCenter.defaultCenter().addObserverForName(ViewModeManagerDidChangeModeNotification, object: nil, queue: nil) { [unowned self] _ in
-            switch ViewModeManager.sharedManager.mode {
+            let mode = ViewModeManager.sharedManager.mode
+            PFAnalytics.trackEvent("view-mode", dimensions:["mode": "\(mode)"])
+            switch mode {
             case .Left:
                 self.fileMode = [.Deletion, .None]
             case .Both:
@@ -68,13 +76,13 @@ class DiffViewController: NSViewController {
     // MARK: - Private
     
     private func setupTextView() {
-        textScrollView.contentInsets = NSEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
-        textView.textContainer!.widthTracksTextView = true
-        textView.textContainer!.containerSize = NSSize(width: 320.0, height:Double(FLT_MAX))
-
-        let textContainer = NSTextContainer()
-        textView.replaceTextContainer(textContainer)
-        textContainer.replaceLayoutManager(DiffLayoutManager())        
+//        textScrollView.contentInsets = NSEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
+//        textView.textContainer!.widthTracksTextView = true
+//        textView.textContainer!.containerSize = NSSize(width: 320.0, height:Double(FLT_MAX))
+//
+//        let textContainer = NSTextContainer()
+//        textView.replaceTextContainer(textContainer)
+//        textContainer.replaceLayoutManager(DiffLayoutManager())        
     }
     
     private func reloadDiff() {
@@ -105,7 +113,19 @@ class DiffViewController: NSViewController {
     }
     
     private func attributedStringForDiff(diff: Diff) -> NSAttributedString {
-        let attributes: [String: AnyObject] = [DiffTypeAttributeName: diff.type.rawValue]
+        var attributes: [String: AnyObject] = [DiffTypeAttributeName: diff.type.rawValue]
+        let backgroundColor: NSColor?
+        switch diff.type {
+        case .Insertion:
+            backgroundColor = NSColor(red:0.882, green:0.994, blue:0.886, alpha:1)
+        case .Deletion:
+            backgroundColor = NSColor(red:1, green:0.894, blue:0.892, alpha:1)
+        case .None:
+            backgroundColor = nil
+        }
+        if let backgroundColor = backgroundColor {
+            attributes[NSBackgroundColorAttributeName] = backgroundColor
+        }
         return NSAttributedString(string: diff.text, attributes: attributes)
     }
     

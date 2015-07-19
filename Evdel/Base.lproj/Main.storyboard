@@ -83,7 +83,7 @@
                                         </menuItem>
                                         <menuItem title="Print…" keyEquivalent="p" id="Vk6-EW-7Eb">
                                             <connections>
-                                                <action selector="print:" target="Ady-hI-5gd" id="3RR-X7-zjE"/>
+                                                <action selector="print:" target="Ady-hI-5gd" id="ofE-Rc-LRy"/>
                                             </connections>
                                         </menuItem>
                                     </items>
@@ -265,18 +265,18 @@
                                     <segue destination="TcR-8T-HaP" kind="embed" id="Hzs-Za-F8e"/>
                                 </connections>
                             </containerView>
-                            <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IjH-Pl-jke">
+                            <scrollView borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IjH-Pl-jke">
                                 <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                                 <clipView key="contentView" copiesOnScroll="NO" id="Ana-fN-z3s">
-                                    <rect key="frame" x="1" y="1" width="478" height="268"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <textView editable="NO" importsGraphics="NO" horizontallyResizable="YES" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" usesFontPanel="YES" verticallyResizable="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" spellingCorrection="YES" smartInsertDelete="YES" id="ofL-11-Jae">
-                                            <rect key="frame" x="0.0" y="0.0" width="478" height="268"/>
+                                        <textView editable="NO" importsGraphics="NO" horizontallyResizable="YES" findStyle="panel" usesRuler="YES" verticallyResizable="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" smartInsertDelete="YES" id="ofL-11-Jae">
+                                            <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <animations/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <size key="minSize" width="478" height="268"/>
+                                            <size key="minSize" width="480" height="270"/>
                                             <size key="maxSize" width="10000000" height="10000000"/>
                                             <attributedString key="textStorage">
                                                 <fragment content=" ">
@@ -287,7 +287,7 @@
                                                 </fragment>
                                             </attributedString>
                                             <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                            <size key="minSize" width="478" height="268"/>
+                                            <size key="minSize" width="480" height="270"/>
                                             <size key="maxSize" width="10000000" height="10000000"/>
                                         </textView>
                                     </subviews>
@@ -296,12 +296,12 @@
                                 </clipView>
                                 <animations/>
                                 <scroller key="horizontalScroller" wantsLayer="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="Fdg-Dz-u5D">
-                                    <rect key="frame" x="1" y="253" width="478" height="16"/>
+                                    <rect key="frame" x="0.0" y="254" width="480" height="16"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <animations/>
                                 </scroller>
                                 <scroller key="verticalScroller" wantsLayer="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="63R-lo-1Pb">
-                                    <rect key="frame" x="463" y="1" width="16" height="268"/>
+                                    <rect key="frame" x="464" y="0.0" width="16" height="270"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <animations/>
                                 </scroller>

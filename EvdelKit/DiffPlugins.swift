@@ -17,9 +17,9 @@ public class DiffMatchPatchPlugin: DiffPlugin {
         if dmpResult == nil {
             throw DiffPluginError.Unknown
         }
+        engine.diff_cleanupMerge(dmpResult)
         engine.diff_cleanupSemantic(dmpResult)
         engine.diff_cleanupEfficiency(dmpResult)
-        engine.diff_cleanupMerge(dmpResult)
         let dmpDiffs = ((dmpResult as NSArray) as! [DMPDiff])
         return dmpDiffs.map{ $0.toDiff() }
     }
